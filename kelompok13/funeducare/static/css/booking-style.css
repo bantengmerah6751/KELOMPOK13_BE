@@ -1,0 +1,109 @@
+:root {
+  --bg-color: #fff;
+  --text-color1: #1f1f21;
+  --text-color2: #fff;
+  --main-color: #15a6f5;
+  --bg-opacity: #fffefa;
+  --big-font: 3rem;
+  --title-font: 40px;
+  --p-font: 1rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style: none;
+}
+/* Gambar background */
+body {
+  background: url("../images/h-bg-1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: var(--text-color1);
+}
+
+.content-1 {
+  position: relative;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Latar belakang transparan untuk konten */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  width: 90%; /* Lebar konten responsif */
+  max-width: 600px; /* Lebar maksimum konten */
+  margin: 20px auto; /* Margin untuk pusat konten */
+}
+
+.form-logo {
+  display: block;
+  margin: 0 auto;
+  width: 20%; /* Ukuran logo responsif */
+  max-width: 100px; /* Lebar maksimum logo */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button-group .btn {
+  padding: 10px 20px;
+  width: 180px;
+  color: var(--bg-color);
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+}
+
+.button-group .btn:hover {
+  background-color: #0e87c2;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.9);
+}
+
+label {
+  font-size: var(--p-font);
+}
+
+legend {
+  font-size: var(--title-font);
+}
+
+h1 {
+  font-size: var(--big-font);
+}
+
+@media (min-width: 768px) {
+  .form-logo {
+    width: 80px; /* Ukuran logo pada layar besar */
+  }
+
+  .content-1 {
+    width: 50%; /* Lebar konten pada layar besar */
+  }
+}
+
+@media (max-width: 768px) {
+  .content-1 {
+    width: 80%; /* Memperlebar form pada layar kecil */
+  }
+  .form-logo {
+    width: 50px; /* Mengurangi ukuran logo pada layar kecil */
+  }
+}
