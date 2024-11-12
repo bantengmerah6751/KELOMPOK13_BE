@@ -249,7 +249,7 @@ body {
             /* Menentukan tinggi elemen 50% dari tinggi viewport. */
             overflow: hidden;
             /* Menyembunyikan konten yang melebihi batas elemen. */
-        }
+}
 .image-section img {
             width: 100%;
             /* Gambar melebar penuh sesuai dengan ukuran kontainer. */
@@ -257,7 +257,40 @@ body {
             /* Gambar meninggi penuh sesuai dengan ukuran kontainer. */
             object-fit: cover;
             /* Gambar tidak terdistorsi dan mengisi seluruh area tanpa mengubah rasio. */
-        }
+}
+.overlay {
+  position: absolute; /* Posisi overlay akan relatif terhadap elemen parent-nya. */
+  top: 0; /* Menempatkan overlay di bagian atas. */
+  left: 0; /* Menempatkan overlay di sisi kiri. */
+  width: 100%; /* Overlay mengisi seluruh lebar elemen. */
+  height: 100%; /* Overlay mengisi seluruh tinggi elemen. */
+  display: flex; /* Mengatur penataan konten di dalamnya dengan mudah. */
+  flex-direction: column; /* Mengatur arah penataan elemen agar disusun secara vertikal. */
+  justify-content: center; /* Menyusun elemen di tengah secara vertikal dalam overlay. */
+  align-items: center; /* Menyusun elemen di tengah secara horizontal dalam overlay. */
+  color: #2f3438; /* Mengatur warna teks menjadi hitam. */
+  text-align: center; /* Mengatur teks agar terletak di tengah. */
+}
+
+.content-1 h1 {
+  font-size: 3.9rem;
+  font-weight: 510;
+  background: #fff;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  align-items: start;
+  line-height: 1;
+}
+
+.garis {
+  opacity: 97%;
+  height: 1px;
+  background: #fff;
+  border: none;
+  border-radius: 17px;
+  width: 90%;
+}
+
 .about-us-container {
   /* Gaya untuk kontainer 'About Us' */
   margin-top: 50px;
