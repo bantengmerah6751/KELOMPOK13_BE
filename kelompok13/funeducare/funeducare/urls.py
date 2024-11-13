@@ -25,5 +25,10 @@ from profil import views
 from programs import views
 
 urlpatterns = [
+    
     path('admin/', admin.site.urls),
+    path('contactus/', include('contactus.urls')),
+    path('home/', include('home.urls')),
+    path('aboutus/', include('aboutus.urls')),
+    path('programs/', include('programs.urls')),
 ]

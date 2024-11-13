@@ -65,7 +65,9 @@ ROOT_URLCONF = 'funeducare.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR,],
+         'DIRS': [
+            BASE_DIR / 'templates',  # Lokasi global template jika ada
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
