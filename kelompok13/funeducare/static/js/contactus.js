@@ -1,49 +1,3 @@
-// gulir jelajahi
-$(document).ready(function () {
-  $("#scrollButton").on("click", function (event) {
-    event.preventDefault(); // Mencegah default action
-    $("html, body").animate(
-      {
-        scrollTop: $("#marqueForm").offset().top, // Mengatur scroll ke posisi bagian tujuan
-      },
-      1500
-    ); // Durasi animasi dalam milidetik
-  });
-});
-
-// js jquery membuat teks disembunyikan content-4
-$(document).ready(function () {
-  // Membuat array yang berisi ID dari semua tombol 'Tampilkan lebih banyak'
-  const readMoreButtons = [
-    "readMoreBtn1",
-    "readMoreBtn2",
-    "readMoreBtn3",
-    "readMoreBtn4",
-    "readMoreBtn5",
-    "readMoreBtn6",
-  ];
-
-  // Melakukan iterasi pada setiap ID tombol di dalam array
-  readMoreButtons.forEach((buttonId) => {
-    $(`#${buttonId}`).on("click", function () {
-      const index = buttonId.charAt(buttonId.length - 1);
-      const $dots = $(`#dots${index}`);
-      const $moreText = $(`#more${index}`);
-
-      const isExpanded = $moreText.css("display") === "inline";
-
-      if (isExpanded) {
-        $dots.css("display", "inline");
-        $moreText.css("display", "none");
-        $(this).text("Tampilkan lebih banyak");
-      } else {
-        $dots.css("display", "none");
-        $moreText.css("display", "inline");
-        $(this).text("Sembunyikan");
-      }
-    });
-  });
-});
 document.addEventListener("DOMContentLoaded", function () {
   const faqItems = document.querySelectorAll(".faq-item");
 
@@ -119,21 +73,4 @@ window.addEventListener("scroll", () => {
   } else {
     navbar.classList.remove("scrolled"); // Hapus kelas jika kurang dari 50px
   }
-});
-
-// back to top
-$(document).ready(function () {
-  // Menampilkan atau menyembunyikan tombol saat menggulir
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-      $("#backToTop").fadeIn(); // Tampilkan tombol
-    } else {
-      $("#backToTop").fadeOut(); // Sembunyikan tombol
-    }
-  });
-
-  // logic klik pada tombol
-  $("#backToTop").click(function () {
-    $("html, body").animate({ scrollTop: 0 }, 1500); // Menggunakan animasi
-  });
 });
