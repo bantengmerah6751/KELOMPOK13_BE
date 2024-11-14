@@ -2,6 +2,7 @@
 
 $(document).ready(function () {
   // Fungsi untuk menampilkan modal
+
   function showModal() {
     $("#loginSuccessModal").fadeIn(); // Menggunakan fadeIn() untuk efek muncul modal
   }

@@ -46,12 +46,24 @@
       </svg>
       <a href="{% url 'users:login' %}" class="link">Back Log-In</a>
     </div>
-
+    <div class="container mt-3">
+      {% if messages %}
+          <div class="alert-container ">
+              {% for message in messages %}
+                  <div class="alert alert-{{ message.tags }} alert-dismissible alert-danger fade show" role="alert">
+                      {{ message }}
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+              {% endfor %}
+          </div>
+      {% endif %}
+  
+  </div>
     <div class="content">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-md-auto">
-            <div class="picture">
+          <div class="col-lg-auto">
+            <div class="picture align-items-center">
               <img
                 src="{% static 'images/img.png' %}"
                 class="img-fluid img"
@@ -61,7 +73,12 @@
           </div>
           <div class="col-md-auto">
             <div class="form">
-              <form action="./login.html" id="signinForm">
+              <form
+                action="{% url 'users:signup' %}"
+                id="signinForm"
+                method="post"
+              >
+                {% csrf_token %}
                 <div class="box">
                   <h1 class="animate__animated animate__fadeInUp">
                     Selamat Datang di FunEduCare!
@@ -70,41 +87,25 @@
                     Gabung untuk pengalaman belajar terbaik untuk anak Anda!
                   </p>
                 </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <input
-                    type="email"
-                    placeholder="Masukkan Email Anda"
-                    class="form-control"
-                    id="email"
-                    name="email"
-                    required
-                  />
+                <div class="mb-2">
+                  <label for="username" class="form-label">Username</label>
+                  {{ form.username }}
                 </div>
-                <div class="mb-3">
-                  <label for="password" class="form-label">Password</label>
-                  <input
-                    type="password"
-                    placeholder="Masukkan Password Anda"
-                    class="form-control"
-                    id="password"
-                    name="password"
-                    required
-                  />
+                <div class="mb-2">
+                  <label for="email" class="form-label">Email</label>
+                  {{ form.email }}
+                </div>
+                <div class="mb-2">
+                  <label for="password1" class="form-label">Password</label>
+                  {{ form.password1 }}
+
                   <p style="margin-top: 5px">Minimal 6 karakter</p>
                 </div>
-                <div class="mb-3">
+                <div class="mb-2">
                   <label for="password" class="form-label"
                     >Verifikasi Password</label
                   >
-                  <input
-                    type="password"
-                    placeholder="Masukkan Ulang Password Anda"
-                    class="form-control"
-                    id="password"
-                    name="password"
-                    required
-                  />
+                  {{ form.password2 }}
                 </div>
                 <div class="submit">
                   <button href="./login.html" type="submit" class="btn">
@@ -119,9 +120,9 @@
     </div>
 
     <!-- Modal Pop-up -->
-    <div id="loginSuccessModal" class="modal">
+    {% comment %} <div id="loginSuccessModal" class="modal">
       <div class="modal-content">
-        <p>Sign-Up Berhasil!</p>
+        <p id="signupSuccessLabel">Sign-Up Berhasil!</p>
         <img
           class="verified"
           src="./assets/images/verified.png"
@@ -130,11 +131,11 @@
         <div class="modal-body">
           Selamat, Anda telah berhasil gabung ke FunEduCare
           <button class="btn-modal close-btn">OK</button>
-          <!-- Tombol untuk menutup modal -->
         </div>
-      </div>
+      </div> {% endcomment %}
     </div>
-
+   
+    </script>
     <!-- Include jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{% static ' js/sign-up.js ' %}"></script>
