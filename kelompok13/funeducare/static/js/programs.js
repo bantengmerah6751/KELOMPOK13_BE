@@ -67,7 +67,7 @@ $(document).ready(function () {
 
   // Countdown Timer
   function updateTimer() {
-    var future = Date.parse("2024-11-31T00:00:00");
+    var future = Date.parse("2024-12-31T00:00:00");
     var now = new Date();
     var diff = future - now;
 
