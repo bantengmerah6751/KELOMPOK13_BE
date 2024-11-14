@@ -1,18 +1,9 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 3ce7539d (wip: forms competition)
 {% extends 'base/base.html' %} {% load static %} {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/programs-style.css' %}" />
 {% endblock %} {% block extra_link %}
-<link
-<<<<<<< HEAD
-  rel="stylesheet" href="{% static 'css/programs-style.css' %}" />
-=======
-  rel="stylesheet"
->>>>>>> 3ce7539d (wip: forms competition)
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+<link rel="stylesheet" href="{% static 'css/programs-style.css' %}" />
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 />
 <!--Font-->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,10 +12,6 @@
   href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
   rel="stylesheet"
 />
-<<<<<<< HEAD
-=======
-<title>{{Judul}}</title>
->>>>>>> 3ce7539d (wip: forms competition)
 {% endblock %} {% block body_block%}
 <body>
   <main>
@@ -36,697 +23,6 @@
         <hr class="garis mx-auto mx-md-0" />
       </div>
     </section>
-<<<<<<< HEAD
-=======
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{Judul}}</title>
-    <link rel="stylesheet" href="./assets/css/programs-style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <!--Font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-  </head>
->>>>>>> 9b73cad1 (wip: capek pen beli truk)
-
-  <body>
-    <!--Navbar Section-->
-    <header>
-      <nav class="navbar navbar-expand-lg fixed-top">
-        <div
-          class="container-fluid me-3 ms-3 rounded-5"
-          style="background-color: #cfcfcf"
-        >
-          <a class="navbar-brand me-auto p-3" href="#">
-            <img src="./assets/images/logo2.png" alt="logo" width="40px" />
-          </a>
-          <div
-            class="offcanvas offcanvas-end text-center"
-            tabindex="-1"
-            id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
-            style="background-color: #cfcfcf"
-          >
-<<<<<<< HEAD
-            <button
-              class="program-tab btn btn-block d-flex align-items-center px-4 py-2 rounded-3 fw-bold active"
-              data-program="infantcare"
-              role="tab"
-              aria-selected="true"
-              aria-controls="infantcare"
-            >
-              <i
-                class="fas fa-baby me-2"
-                style="color: #ec4899"
-                aria-hidden="true"
-              ></i
-              ><a class="fs-5" href="#infantcare" style="color: #ec4899"
-                >Infant Care</a
-              >
-            </button>
-          </li>
-          <li
-            class="col-md-3 flex-grow-1 d-grid gap-2 align-items-center justify-content-md-center justify-content-start"
-          >
-            <button
-              class="program-tab btn btn-block d-flex align-items-center px-4 py-2 rounded-3 fw-bold"
-              data-program="toddler"
-              role="tab"
-              aria-selected="false"
-              aria-controls="toddler"
-            >
-              <i
-                class="fas fa-solid fa-child me-2"
-                aria-hidden="true"
-                style="color: #9333ea"
-              ></i
-              ><a class="fs-5" href="#toddler" style="color: #9333ea"
-                >Toddler</a
-              >
-            </button>
-          </li>
-          <li
-            class="col-md-3 flex-grow-1 d-grid gap-2 align-items-center justify-content-md-center justify-content-start"
-          >
-            <button
-              class="program-tab btn btn-block d-flex align-items-center px-4 py-2 rounded-3 fw-bold"
-              data-program="preschool"
-              role="tab"
-              aria-selected="false"
-              aria-controls="preschool"
-            >
-              <i
-                class="fas fa-solid fa-children me-2"
-                aria-hidden="true"
-                style="color: #3b82f6"
-              ></i
-              ><a class="fs-5" href="#preschool" style="color: #3b82f6"
-                >Pre-School</a
-              >
-            </button>
-          </li>
-          <li
-            class="col-md-3 flex-grow-1 d-grid gap-2 align-items-center justify-content-md-center justify-content-start"
-          >
-            <button
-              class="program-tab btn btn-block d-flex align-items-center px-4 py-2 rounded-3 fw-bold"
-              data-program="prekindergarten"
-              role="tab"
-              aria-selected="false"
-              aria-controls="prekindergarten"
-            >
-              <i
-                class="fas fa-solid fa-child-reaching me-2"
-                aria-hidden="true"
-                style="color: #10b981"
-              ></i
-              ><a class="fs-5" href="#prekindergarten" style="color: #10b981"
-                >Pre-Kindergarten</a
-              >
-            </button>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Tab Content -->
-      <div id="infantcare">
-        <div class="container overflow-hidden text-center">
-          <div class="row gx-5">
-            <h3 class="fw-bold fs-1">Infant Care Program</h3>
-            <p class="text-muted">Usia 3 - 12 Bulan</p>
-            <div class="col-md-6">
-              <div
-                id="carouselExampleSlidesOnly"
-                class="carousel slide"
-                data-bs-ride="carousel"
-              >
-                <div class="carousel-inner rounded-3">
-                  <div class="carousel-item active">
-                    <img
-                      src="{% static 'images//infant-care-1.jpg'%}"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="{% static 'images/infant-care-2.jpg' %}"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="{% static 'images/infant-care-3.jpg' %}"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="p-3 mb-2 bg-info-subtle text-info-emphasis">
-                <div>
-                  <i class="fas fa-users" aria-hidden="true"></i>
-                  <h4 class="fw-medium mb-1">Rasio Pengasuh</h4>
-                  <p class="small text-muted mb-0">
-                    1:3 (1 pengasuh untuk 3 bayi)
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <ul
-                class="list-group-flush pb-4 flex-grow-1 fw-medium fst-italic"
-              >
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars"></i>
-                  Lingkungan yang aman dan menarik untuk eksplorasi
-                </li>
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars"></i>
-                  Mainan dan aktivitas yang sesuai dengan tahap usia
-                </li>
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars"></i>
-                  Sesi musik dan gerakan untuk stimulasi
-                </li>
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars"></i>
-                  Tummy time seperti aktivitas pengembangan fisik
-                </li>
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars"></i>
-                  Pengenalan bahasa isyarat untuk bayi
-                </li>
-              </ul>
-              <div id="moreInfoInfantCare" class="mt-1" style="display: none">
-                <div class="row">
-                  <div class="col-md-6">
-                    <h6>Jadwal</h6>
-                    <p class="fw-bold">Senin - Jumat, 07.00 - 18.00</p>
-                  </div>
-                  <div class="col-md-6">
-                    <h6>Biaya</h6>
-                    <p class="fw-bold" style="color: red">
-                      Mulai dari Rp 2.500.000/bulan
-                    </p>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary btn-block d-flex justify-content-center align-items-center w-100"
-                  data-bs-toggle="modal"
-                  data-bs-target="#infoModalInfantCare"
-                >
-                  Lihat Detail Lengkap
-                </button>
-              </div>
-              <div class="button-group d-flex">
-                <button
-                  class="btn btn-block btn-3 mt-3 w-100"
-                  id="toggleInfoInfantCare"
-                >
-                  Informasi Lebih Lanjut
-                </button>
-              </div>
-              <div class="button-group mb-5 d-flex">
-                <button
-                  class="btn btn-block btn-2 mt-3 w-100"
-                  style="margin-top: auto"
-                >
-                  Booking Infant Care Program
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="toddler">
-        <div class="container overflow-hidden text-center">
-          <div class="row gx-5">
-            <h3 class="fw-bold fs-1">Toddler Program</h3>
-            <p class="text-muted">Usia 1 - 2 Tahun</p>
-            <div class="col-md-6">
-              <div
-                id="carouselExampleSlidesOnly"
-                class="carousel slide"
-                data-bs-ride="carousel"
-              >
-                <div class="carousel-inner rounded-3">
-                  <div class="carousel-item active">
-                    <img
-                      src="{% static 'images/toddler-1.jpg'%}"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="{% static 'images/toddler-2.jpg'%}"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="{% static 'images/toddler-3.jpg'%}"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="p-3 mb-2 bg-info-subtle text-info-emphasis">
-                <div>
-                  <i class="fas fa-users" aria-hidden="true"></i>
-                  <h4 class="fw-medium mb-1">Rasio Pengasuh</h4>
-                  <p class="small text-muted mb-0">
-                    2:5 (2 pengasuh untuk 5 toddler)
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <ul class="list-group list-group-flush pb-4 fw-medium fst-italic">
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars"></i>
-                  Aktivitas pengembangan bahasa
-                </li>
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars"></i>
-                  Keterampilan motorik halus dan kasar
-                </li>
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars"></i>
-                  Pengenalan warna, bentuk dan angka
-                </li>
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars"></i>
-                  Latihan interaksi sosial dan berbagi
-                </li>
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars"></i>
-                  Program membaca untuk balita
-                </li>
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars"></i>
-                  Mewarnai menggunakan media tempel
-                </li>
-              </ul>
-              <div
-                id="moreInfoToddlerProgram"
-                class="mt-1"
-                style="display: none"
-              >
-                <div class="row">
-                  <div class="col-md-6">
-                    <h6>Jadwal</h6>
-                    <p class="fw-bold">Senin - Jumat, 07.00 - 18.00</p>
-                  </div>
-                  <div class="col-md-6">
-                    <h6>Biaya</h6>
-                    <p class="fw-bold" style="color: red">
-                      Mulai dari Rp 2.500.000/bulan
-                    </p>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary btn-block d-flex justify-content-center align-items-center w-100"
-                  data-bs-toggle="modal"
-                  data-bs-target="#infoModalToddlerProgram"
-                >
-                  Lihat Detail Lengkap
-                </button>
-              </div>
-              <div class="button-group d-flex">
-                <button
-                  class="btn btn-block btn-3 mt-1 w-100"
-                  id="toggleInfoToddlerProgram"
-                >
-                  Informasi Lebih Lanjut
-                </button>
-              </div>
-              <div class="button-group mb-5 d-flex">
-                <button
-                  class="btn btn-block btn-2 mt-3 w-100"
-                  style="margin-top: auto"
-                >
-                  Booking Toddler Program
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="preschool">
-        <div class="container overflow-hidden text-center">
-          <div class="row gx-5">
-            <h3 class="fw-bold fs-1">Pre-School Program</h3>
-            <p class="text-muted">Usia 3 - 4 Tahun</p>
-            <div class="col-md-6">
-              <div
-                id="carouselExampleSlidesOnly"
-                class="carousel slide"
-                data-bs-ride="carousel"
-              >
-                <div class="carousel-inner rounded-3">
-                  <div class="carousel-item active">
-                    <img
-                     src="{% static 'images/preschool-1.jpg'%}"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                     src="{% static 'images/preschool-2.jpg'%}"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="{% static 'images/preschool-3.jpg'%}"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="p-3 mb-2 bg-info-subtle text-info-emphasis">
-                <div>
-                  <i class="fas fa-users" aria-hidden="true"></i>
-                  <h4 class="fw-medium mb-1">Rasio Pengasuh</h4>
-                  <p class="small text-muted mb-0">
-                    2:7 (2 pengasuh untuk 7 anak)
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <ul class="list-group list-group-flush pb-4 fw-medium fst-italic">
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars"></i>
-                  Keterampilan pra-baca dan menulis
-                </li>
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars"></i>
-                  Konsep dasar matematika
-                </li>
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars"></i>
-                  Eksperimen sains dan eksplorasi alam
-                </li>
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars"></i>
-                  Proyek seni dan kerajinan
-                </li>
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars text-start"></i>
-                  Kelas musikal dan menari
-                </li>
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars text-start"></i>
-                  Keterampilan pengembangan sosial dan emosional
-                </li>
-              </ul>
-              <div
-                id="moreInfoPre-SchoolProgram"
-                class="mt-1"
-                style="display: none"
-              >
-                <div class="row">
-                  <div class="col-md-6">
-                    <h6>Jadwal</h6>
-                    <p class="fw-bold">Senin - Jumat, 07.00 - 18.00</p>
-                  </div>
-                  <div class="col-md-6">
-                    <h6>Biaya</h6>
-                    <p class="fw-bold" style="color: red">
-                      Mulai dari Rp 2.500.000/bulan
-                    </p>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary btn-block d-flex justify-content-center align-items-center w-100"
-                  data-bs-toggle="modal"
-                  data-bs-target="#infoModalPre-SchoolProgram"
-                >
-                  Lihat Detail Lengkap
-                </button>
-              </div>
-              <div class="button-group d-flex">
-                <button
-                  class="btn btn-block btn-3 mt-3 w-100"
-                  id="toggleInfoPre-SchoolProgram"
-                >
-                  Informasi Lebih Lanjut
-                </button>
-              </div>
-              <div class="button-group mb-5 d-flex">
-                <button
-                  class="btn btn-block btn-2 mt-3 w-100"
-                  style="margin-top: auto"
-                >
-                  Booking Pre-School Program
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="prekindergarten">
-        <div class="container overflow-hidden text-center">
-          <div class="row gx-5">
-            <h3 class="fw-bold fs-1">Pre-Kindergarten Program</h3>
-            <p class="text-muted">Usia 4 - 5 Tahun</p>
-            <div class="col-md-6">
-              <div
-                id="carouselExampleSlidesOnly"
-                class="carousel slide"
-                data-bs-ride="carousel"
-              >
-                <div class="carousel-inner rounded-3">
-                  <div class="carousel-item active">
-                    <img
-                     src="{% static 'images/prekindergarten-1.jpg' %}"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="{% static 'images/prekindergarten-2.jpg' %}"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="{% static 'images/prekindergarten.-3.jpeg' %}"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="p-3 mb-2 bg-info-subtle text-info-emphasis">
-                <div>
-                  <i class="fas fa-users" aria-hidden="true"></i>
-                  <h4 class="fw-medium mb-1">Rasio Pengasuh</h4>
-                  <p class="small text-muted mb-0">
-                    3:10 (3 pengasuh untuk 10 anak)
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <ul class="list-group list-group-flush pb-4 fw-medium fst-italic">
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars text-start"></i>
-                  Keterampilan literasi tingkat lanjutan
-                </li>
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars text-start"></i>
-                  Pemahaman penalaran logika
-                </li>
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars text-start"></i>
-                  Pemikiran kritis dan solusi masalah
-                </li>
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars text-start"></i>
-                  Pengenalan teknologi
-                </li>
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars text-start"></i>
-                  Kesadaran budaya dan keberagaraman
-                </li>
-                <li class="list-group-item text-start">
-                  <i class="bi bi-moon-stars text-start"></i>
-                  Edukasi fisik dan olahraga
-                </li>
-              </ul>
-              <div
-                id="moreInfoPre-KindergartenProgram"
-                class="mt-1"
-                style="display: none"
-              >
-                <div class="row">
-                  <div class="col-md-6">
-                    <h6>Jadwal</h6>
-                    <p class="fw-bold">Senin - Jumat, 07.00 - 18.00</p>
-                  </div>
-                  <div class="col-md-6">
-                    <h6>Biaya</h6>
-                    <p class="fw-bold" style="color: red">
-                      Mulai dari Rp 2.500.000/bulan
-                    </p>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary btn-block d-flex justify-content-center align-items-center w-100"
-                  data-bs-toggle="modal"
-                  data-bs-target="#infoModalPre-KindergartenProgram"
-                >
-                  Lihat Detail Lengkap
-                </button>
-              </div>
-              <div class="button-group d-flex">
-                <button
-                  class="btn btn-block btn-3 mt-3 w-100"
-                  id="toggleInfoPre-KindergartenProgram"
-                >
-                  Informasi Lebih Lanjut
-                </button>
-              </div>
-              <div class="button-group mb-5 d-flex">
-                <button
-                  class="btn btn-block btn-2 mt-3 w-100"
-                  style="margin-top: auto"
-                >
-                  Booking Pre-Kindergarten Program
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--Upcoming Event-->
-    <section id="upcoming" class="hidden pt-5 p-4" id="upcoming-event">
-      <div class="container">
-        <div class="row g-5 align-items-center content-2">
-          <h2 class="text-center fs-1 fw-bolder mx-auto pb-4">
-            Upcoming Event
-          </h2>
-          <div class="col-md-6">
-            <img
-              src="{% static 'images/Junior-Cooking-Competition.jpg' %}"
-              alt="Deskripsi Gambar"
-              class="img-custom rounded mx-auto d-block"
-            />
-          </div>
-          <div class="col-md-6">
-            <h5 class="fs-3 fw-bolder pb-2">
-              Junior Chef Cooking Competition: Hai Moms, Siapkan Si Kecil
-              Menjadi Bintang Dapur!
-            </h5>
-            <p class="fw-medium">
-              Jangan lewatkan kesempatan emas ini! Daftarkan Si Kecil sekarang
-              dan saksikan mereka bersinar di panggung dapur! 🌟
-              <br />
-              Yuk, moms! Ayo ajak Si Kecil untuk ikut berpartisipasi dan
-              tunjukkan bakatnya! 🍽️✨
-            </p>
-            <h5 class="pt-5">Ayuk daftar sebelum ketinggalan</h5>
-            <h3 id="teks" class="pb-1" style="color: red"></h3>
-            <div class="button-group mb-5 d-flex">
-=======
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                <img
-                  src="./assets/images/logo2.png"
-                  alt="logo"
-                  class="logo-small"
-                />
-              </h5>
->>>>>>> 9b73cad1 (wip: capek pen beli truk)
-              <button
-                type="button"
-                class="btn-close bg-light"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-center flex-grow-1 pe-4">
-                <li class="nav-item">
-                  <a
-                    class="nav-link mx-lg-3"
-                    aria-current="page"
-                    href="./index.html"
-                    >HOME</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-lg-3" href="aboutus.html">ABOUT US</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link active dropdown-toggle mx-lg-3"
-                    href
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    PROGRAMS
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="programs.html"
-                        >ALL-PROGRAM</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="myprogram.html"
-                        >MY-PROGRAM</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-lg-3" href="contactus.html"
-                    >CONTACT US</a
-                  >
-                </li>
-              </ul>
-=======
 
     <section class="program-description-section py-5" style="margin-top: -55px">
       <div class="container content-2">
@@ -747,7 +43,6 @@
                   d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
                 />
               </svg>
->>>>>>> 3ce7539d (wip: forms competition)
             </div>
             <h5 class="mt-3">Lingkungan Aman</h5>
             <p>
@@ -927,7 +222,7 @@
                 <div class="carousel-inner rounded-3">
                   <div class="carousel-item active">
                     <img
-                      src="{% static 'images/infant-care-1.jpg' %}"
+                      src="{% static 'images//infant-care-1.jpg'%}"
                       class="d-block w-100"
                       alt="..."
                     />
@@ -962,8 +257,7 @@
               <ul class="list-group list-group-flush pb-4 fw-medium fst-italic">
                 <li class="list-group-item text-start">
                   <i class="bi bi-moon-stars"></i>
-                  Aktivitas pengembangan bahasa
-                </li>
+                  Aktivitas pengembangan bahasa</li>
                 <li class="list-group-item text-start">
                   <i class="bi bi-moon-stars"></i>
                   Keterampilan motorik halus dan kasar
@@ -978,8 +272,7 @@
                 </li>
                 <li class="list-group-item text-start">
                   <i class="bi bi-moon-stars"></i>
-                  Program membaca untuk balita
-                </li>
+                  Program membaca untuk balita</li>
                 <li class="list-group-item text-start">
                   <i class="bi bi-moon-stars"></i>
                   Mewarnai menggunakan media tempel
@@ -1041,21 +334,21 @@
                 <div class="carousel-inner rounded-3">
                   <div class="carousel-item active">
                     <img
-                      src="{% static 'images/toddler-1.jpg' %}"
+                      src="{% static 'images/toddler-1.jpg'%}"
                       class="d-block w-100"
                       alt="..."
                     />
                   </div>
                   <div class="carousel-item">
                     <img
-                      src="{% static 'images/toddler-2.jpg' %}"
+                      src="{% static 'images/toddler-2.jpg'%}"
                       class="d-block w-100"
                       alt="..."
                     />
                   </div>
                   <div class="carousel-item">
                     <img
-                      src="{% static 'images/toddler-3.jpg' %}"
+                      src="{% static 'images/toddler-3.jpg'%}"
                       class="d-block w-100"
                       alt="..."
                     />
@@ -1159,21 +452,21 @@
                 <div class="carousel-inner rounded-3">
                   <div class="carousel-item active">
                     <img
-                      src="{% static 'images/preschool-1.jpg' %}"
+                      src="{% static 'images/preschool-1.jpg'%}"
                       class="d-block w-100"
                       alt="..."
                     />
                   </div>
                   <div class="carousel-item">
                     <img
-                      src="{% static 'images/preschool-2.jpg' %}"
+                      src="{% static 'images/preschool-2.jpg'%}"
                       class="d-block w-100"
                       alt="..."
                     />
                   </div>
                   <div class="carousel-item">
                     <img
-                      src="{% static 'images/preschool-3.jpg' %}"
+                      src="{% static 'images/preschool-3.jpg'%}"
                       class="d-block w-100"
                       alt="..."
                     />
@@ -1291,7 +584,7 @@
                   </div>
                   <div class="carousel-item">
                     <img
-                      src="{% static 'images/prekindergarten-3.jpg' %}"
+                      src="{% static 'images/prekindergarten-3.jpeg' %}"
                       class="d-block w-100"
                       alt="..."
                     />
@@ -1397,1158 +690,6 @@
               class="img-custom rounded mx-auto d-block"
             />
           </div>
-<<<<<<< HEAD
-        </div>
-      </div>
-      <!--Modal Toddler Program-->
-      <div
-        class="modal fade"
-        id="infoModalToddlerProgram"
-        tabindex="-1"
-        aria-labelledby="infoModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-xl modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="infoModalLabel">
-                Informasi Lengkap - Toddler Program
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <div class="row mt-2">
-                <div class="col-md-6">
-                  <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
-                    <h4 class="fw-medium">
-                      <i class="bi bi-cash me-2"></i>Biaya
-                    </h4>
-                    <p class="mt-2">
-                      Kami menawarkan beberapa pilihan paket biaya yang
-                      fleksibel, disesuaikan dengan kebutuhan dan durasi
-                      pendaftaran.
-                    </p>
-<<<<<<< HEAD
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="card shadow p-3 bg-body-tertiary rounded">
-                  <h4 class="fw-medium">
-                    <i class="bi bi-shield-shaded me-2"></i>Fasilitas
-                  </h4>
-                  <p class="mt-2">
-                    Fasilitas kami dirancang khusus untuk kenyamanan dan
-                    keamanan bayi:
-                  </p>
-                  <ul class="list-unstyled mt-3">
-                    <div class="p-3 mb-2 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="fa-solid fa-solid fa-shapes me-2"></i>Ruangan
-                        bermain yang luas dan aman
-                      </li>
-                    </div>
-                    <div class="p-3 mb-2 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="fa-solid fa-bed me-2"></i>Area tidur yang
-                        tenang dan bersih
-                      </li>
-                    </div>
-                    <div class="p-3 mb-2 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="fa-solid fa-brain me-2"></i>Peralatan
-                        stimulasi perkembangan terkini
-                      </li>
-                    </div>
-                    <div class="p-3 mb-2 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="bi bi-camera-video-fill me-2"></i>Sistem
-                        pemantauan CCTV untuk keamanan ekstra
-                      </li>
-                    </div>
-                    <div class="p-3 mb-2 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="fa-solid fa-gamepad me-2"></i>Program
-                        pembelajaran berbasis permainan
-                      </li>
-                    </div>
-                    <div class="p-3 mb-2 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="fa-solid fa-paintbrush me-2"></i>Kegiatan seni
-                        dan kreativitas yang mendukung ekspresi diri
-                      </li>
-                    </div>
-                    <div class="p-3 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="fa-solid fa-users me-2"></i>Staf yang ramah
-                        dan berpengalaman
-                      </li>
-                    </div>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <hr />
-            <div class="mt-3">
-              <h4 class="fw-medium">
-                <i class="fa-solid fa-chalkboard-user me-2"></i>Profil Pengajar
-              </h4>
-              <div class="row mt-3">
-                <div class="col-md-4 text-center">
-                  <div class="card shadow p-3 bg-body-tertiary rounded">
-                    <img
-                      src="{% static 'images/img-3.jpg' %}"
-                      class="img-fluid rounded-circle mb-2 border mx-auto d-block"
-                      alt="Ms. Sari"
-                      style="width: 100px"
-                    />
-                    <h5>Ms. Sari</h5>
-                    <p>Kepala Pengajar (10 tahun pengalaman)</p>
-                  </div>
-                </div>
-                <div class="col-md-4 text-center">
-                  <div class="card shadow p-3 bg-body-tertiary rounded">
-                    <img
-                     src="{% static 'images/img-3.jpg' %}"
-                      class="img-fluid rounded-circle mb-2 border mx-auto d-block"
-                      alt="Ms. Sari"
-                      style="width: 100px"
-                    />
-                    <h5>Ms. Sari</h5>
-                    <p>Kepala Pengajar (10 tahun pengalaman)</p>
-                  </div>
-                </div>
-                <div class="col-md-4 text-center">
-                  <div class="card shadow p-3 bg-body-tertiary rounded">
-                    <img
-                      src="{% static 'images/img-3.jpg' %}"
-                      class="img-fluid rounded-circle mb-2 border mx-auto d-block"
-                      alt="Ms. Sari"
-                      style="width: 100px"
-                    />
-                    <h5>Ms. Sari</h5>
-                    <p>Kepala Pengajar (10 tahun pengalaman)</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer button-group d-flex justify-content-between">
-            <button type="button" class="btn btn-3" data-bs-dismiss="modal">
-              Tutup
-            </button>
-            <button type="button" class="btn btn-2">
-              <i class="bi bi-whatsapp"></i> Hubungi Kami
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--Modal Toddler Program-->
-    <div
-      class="modal fade"
-      id="infoModalToddlerProgram"
-      tabindex="-1"
-      aria-labelledby="infoModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-xl modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="infoModalLabel">
-              Informasi Lengkap - Toddler Program
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <div class="row mt-2">
-              <div class="col-md-6">
-                <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
-                  <h4 class="fw-medium">
-                    <i class="bi bi-cash me-2"></i>Biaya
-                  </h4>
-                  <p class="mt-2">
-                    Kami menawarkan beberapa pilihan paket biaya yang fleksibel,
-                    disesuaikan dengan kebutuhan dan durasi pendaftaran.
-                  </p>
-                  <ul class="list-unstyled mt-3">
-                    <li
-                      class="d-flex justify-content-between align-items-center mb-3 p-1 bg-white text-dark"
-                    >
-                      <span class="fw-semibold">Part-time (3 hari)</span>
-                      <span class="fw-bold" style="color: red"
-                        >Rp 2.500.000/bulan</span
-=======
-                    <ul class="list-unstyled mt-3">
-                      <li
-                        class="d-flex justify-content-between align-items-center mb-3 p-1 bg-white text-dark"
->>>>>>> 9b73cad1 (wip: capek pen beli truk)
-                      >
-                        <span class="fw-semibold">Part-time (3 hari)</span>
-                        <span class="fw-bold" style="color: red"
-                          >Rp 2.500.000/bulan</span
-                        >
-                      </li>
-                      <hr />
-                      <li
-                        class="d-flex justify-content-between align-items-center mb-3 p-1 bg-white text-dark"
-                      >
-                        <span class="fw-semibold">Full-time (5 hari)</span>
-                        <span class="fw-bold" style="color: red"
-                          >Rp 3.500.000/bulan</span
-                        >
-                      </li>
-                      <hr />
-                      <li
-                        class="d-flex justify-content-between align-items-center mb-3 p-1 bg-white text-dark"
-                      >
-                        <span class="fw-semibold">Drop-in</span>
-                        <span class="fw-bold" style="color: red"
-                          >Rp 250.000/hari</span
-                        >
-                      </li>
-                    </ul>
-                    <h4 class="fw-medium mt-3">
-                      <i class="bi bi-clock-fill me-2"></i>Jadwal
-                    </h4>
-                    <p class="mt-2">
-                      Program Infant Care kami tersedia setiap hari Senin hingga
-                      Jumat, dari pukul 07.00 hingga 18.00.
-                    </p>
-<<<<<<< HEAD
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="card shadow p-3 bg-body-tertiary rounded">
-                  <h4 class="fw-medium">
-                    <i class="bi bi-shield-shaded me-2"></i>Fasilitas
-                  </h4>
-                  <p class="mt-2">
-                    Fasilitas kami dirancang khusus untuk kenyamanan dan
-                    keamanan bayi:
-                  </p>
-                  <ul class="list-unstyled mt-3">
-                    <div class="p-3 mb-2 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="fa-solid fa-solid fa-shapes me-2"></i>Ruangan
-                        bermain yang luas dan aman
-                      </li>
-                    </div>
-                    <div class="p-3 mb-2 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="fa-solid fa-bed me-2"></i>Area tidur yang
-                        tenang dan bersih
-                      </li>
-                    </div>
-                    <div class="p-3 mb-2 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="fa-solid fa-brain me-2"></i>Peralatan
-                        stimulasi perkembangan terkini
-                      </li>
-                    </div>
-                    <div class="p-3 mb-2 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="bi bi-camera-video-fill me-2"></i>Sistem
-                        pemantauan CCTV untuk keamanan ekstra
-                      </li>
-                    </div>
-                    <div class="p-3 mb-2 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="fa-solid fa-gamepad me-2"></i>Program
-                        pembelajaran berbasis permainan
-                      </li>
-                    </div>
-                    <div class="p-3 mb-2 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="fa-solid fa-paintbrush me-2"></i>Kegiatan seni
-                        dan kreativitas yang mendukung ekspresi diri
-                      </li>
-                    </div>
-                    <div class="p-3 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="fa-solid fa-users me-2"></i>Staf yang ramah
-                        dan berpengalaman
-                      </li>
-                    </div>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <hr />
-            <div class="mt-3">
-              <h4 class="fw-medium">
-                <i class="fa-solid fa-chalkboard-user me-2"></i>Profil Pengajar
-              </h4>
-              <div class="row mt-3">
-                <div class="col-md-4 text-center">
-                  <div class="card shadow p-3 bg-body-tertiary rounded">
-                    <img
-                      src="{% static 'images/img-3.jpg' %}"
-                      class="img-fluid rounded-circle mb-2 border mx-auto d-block"
-                      alt="Ms. Sari"
-                      style="width: 100px"
-                    />
-                    <h5>Ms. Sari</h5>
-                    <p>Kepala Pengajar (10 tahun pengalaman)</p>
-                  </div>
-                </div>
-                <div class="col-md-4 text-center">
-                  <div class="card shadow p-3 bg-body-tertiary rounded">
-                    <img
-                      src="{% static 'images/img-3.jpg' %}"
-                      class="img-fluid rounded-circle mb-2 border mx-auto d-block"
-                      alt="Ms. Sari"
-                      style="width: 100px"
-                    />
-                    <h5>Ms. Sari</h5>
-                    <p>Kepala Pengajar (10 tahun pengalaman)</p>
-                  </div>
-                </div>
-                <div class="col-md-4 text-center">
-                  <div class="card shadow p-3 bg-body-tertiary rounded">
-                    <img
-                      src="{% static 'images/img-3.jpg' %}"
-                      class="img-fluid rounded-circle mb-2 border mx-auto d-block"
-                      alt="Ms. Sari"
-                      style="width: 100px"
-                    />
-                    <h5>Ms. Sari</h5>
-                    <p>Kepala Pengajar (10 tahun pengalaman)</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer button-group d-flex justify-content-between">
-            <button type="button" class="btn btn-3" data-bs-dismiss="modal">
-              Tutup
-            </button>
-            <button type="button" class="btn btn-2">
-              <i class="bi bi-whatsapp"></i> Hubungi Kami
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--Modal Pre-School Program-->
-    <div
-      class="modal fade"
-      id="infoModalPre-SchoolProgram"
-      tabindex="-1"
-      aria-labelledby="infoModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-xl modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="infoModalLabel">
-              Informasi Lengkap - Pre-School Program
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <div class="row mt-2">
-              <div class="col-md-6">
-                <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
-                  <h4 class="fw-medium">
-                    <i class="bi bi-cash me-2"></i>Biaya
-                  </h4>
-                  <p class="mt-2">
-                    Kami menawarkan beberapa pilihan paket biaya yang fleksibel,
-                    disesuaikan dengan kebutuhan dan durasi pendaftaran.
-                  </p>
-                  <ul class="list-unstyled mt-3">
-                    <li
-                      class="d-flex justify-content-between align-items-center mb-3 p-1 bg-white text-dark"
-                    >
-                      <span class="fw-semibold">Part-time (3 hari)</span>
-                      <span class="fw-bold" style="color: red"
-                        >Rp 2.500.000/bulan</span
-=======
-                    <ul class="list-unstyled mt-3">
-                      <li
-                        class="d-flex justify-content-between align-items-center mb-3 p-1 bg-white text-dark"
->>>>>>> 9b73cad1 (wip: capek pen beli truk)
-                      >
-                        <span class="fw-semibold">Hari Operasional</span>
-                        <span class="fw-bold">Senin - Jumat</span>
-                      </li>
-                      <hr />
-                      <li
-                        class="d-flex justify-content-between align-items-center p-1 bg-white text-dark"
-                      >
-                        <span class="fw-semibold">Jam Layanan</span>
-                        <span class="fw-bold">07.00 - 18.00</span>
-                      </li>
-                    </ul>
-                    <div class="p-3 mb-2 bg-warning text-dark mt-3">
-                      <h4>
-                        <i class="bi bi-exclamation-square-fill me-2"></i
-                        >Informasi
-                      </h4>
-                      <p class="fw-bold">
-                        Kami menghormati hari libur nasional dan hari raya,
-                        sehingga layanan kami akan tutup. Untuk informasi lebih
-                        lanjut, hubungi kami.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="card shadow p-3 bg-body-tertiary rounded">
-                    <h4 class="fw-medium">
-                      <i class="bi bi-shield-shaded me-2"></i>Fasilitas
-                    </h4>
-                    <p class="mt-2">
-                      Fasilitas kami dirancang khusus untuk kenyamanan dan
-                      keamanan bayi:
-                    </p>
-                    <ul class="list-unstyled mt-3">
-                      <div class="p-3 mb-2 bg-body-secondary">
-                        <li class="p-2">
-                          <i class="fa-solid fa-solid fa-shapes me-2"></i
-                          >Ruangan bermain yang luas dan aman
-                        </li>
-                      </div>
-                      <div class="p-3 mb-2 bg-body-secondary">
-                        <li class="p-2">
-                          <i class="fa-solid fa-bed me-2"></i>Area tidur yang
-                          tenang dan bersih
-                        </li>
-                      </div>
-                      <div class="p-3 mb-2 bg-body-secondary">
-                        <li class="p-2">
-                          <i class="fa-solid fa-brain me-2"></i>Peralatan
-                          stimulasi perkembangan terkini
-                        </li>
-                      </div>
-                      <div class="p-3 mb-2 bg-body-secondary">
-                        <li class="p-2">
-                          <i class="bi bi-camera-video-fill me-2"></i>Sistem
-                          pemantauan CCTV untuk keamanan ekstra
-                        </li>
-                      </div>
-                      <div class="p-3 mb-2 bg-body-secondary">
-                        <li class="p-2">
-                          <i class="fa-solid fa-gamepad me-2"></i>Program
-                          pembelajaran berbasis permainan
-                        </li>
-                      </div>
-                      <div class="p-3 mb-2 bg-body-secondary">
-                        <li class="p-2">
-                          <i class="fa-solid fa-paintbrush me-2"></i>Kegiatan
-                          seni dan kreativitas yang mendukung ekspresi diri
-                        </li>
-                      </div>
-                      <div class="p-3 bg-body-secondary">
-                        <li class="p-2">
-                          <i class="fa-solid fa-users me-2"></i>Staf yang ramah
-                          dan berpengalaman
-                        </li>
-                      </div>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <hr />
-              <div class="mt-3">
-                <h4 class="fw-medium">
-                  <i class="fa-solid fa-chalkboard-user me-2"></i>Profil
-                  Pengajar
-                </h4>
-                <div class="row mt-3">
-                  <div class="col-md-4 text-center">
-                    <div class="card shadow p-3 bg-body-tertiary rounded">
-                      <img
-                        src="./assets/images/img-3.jpg"
-                        class="img-fluid rounded-circle mb-2 border mx-auto d-block"
-                        alt="Ms. Sari"
-                        style="width: 100px"
-                      />
-                      <h5>Ms. Sari</h5>
-                      <p>Kepala Pengajar (10 tahun pengalaman)</p>
-                    </div>
-<<<<<<< HEAD
-                    <div class="p-3 mb-2 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="fa-solid fa-bed me-2"></i>Area tidur yang
-                        tenang dan bersih
-                      </li>
-                    </div>
-                    <div class="p-3 mb-2 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="fa-solid fa-brain me-2"></i>Peralatan
-                        stimulasi perkembangan terkini
-                      </li>
-                    </div>
-                    <div class="p-3 mb-2 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="bi bi-camera-video-fill me-2"></i>Sistem
-                        pemantauan CCTV untuk keamanan ekstra
-                      </li>
-                    </div>
-                    <div class="p-3 mb-2 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="fa-solid fa-gamepad me-2"></i>Program
-                        pembelajaran berbasis permainan
-                      </li>
-                    </div>
-                    <div class="p-3 mb-2 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="fa-solid fa-paintbrush me-2"></i>Kegiatan seni
-                        dan kreativitas yang mendukung ekspresi diri
-                      </li>
-                    </div>
-                    <div class="p-3 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="fa-solid fa-users me-2"></i>Staf yang ramah
-                        dan berpengalaman
-                      </li>
-                    </div>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <hr />
-            <div class="mt-3">
-              <h4 class="fw-medium">
-                <i class="fa-solid fa-chalkboard-user me-2"></i>Profil Pengajar
-              </h4>
-              <div class="row mt-3">
-                <div class="col-md-4 text-center">
-                  <div class="card shadow p-3 bg-body-tertiary rounded">
-                    <img
-                      src="{% static 'images/img-3.jpg' %}"
-                      class="img-fluid rounded-circle mb-2 border mx-auto d-block"
-                      alt="Ms. Sari"
-                      style="width: 100px"
-                    />
-                    <h5>Ms. Sari</h5>
-                    <p>Kepala Pengajar (10 tahun pengalaman)</p>
-                  </div>
-                </div>
-                <div class="col-md-4 text-center">
-                  <div class="card shadow p-3 bg-body-tertiary rounded">
-                    <img
-                    src="{% static 'images/img-3.jpg' %}"
-                      class="img-fluid rounded-circle mb-2 border mx-auto d-block"
-                      alt="Ms. Sari"
-                      style="width: 100px"
-                    />
-                    <h5>Ms. Sari</h5>
-                    <p>Kepala Pengajar (10 tahun pengalaman)</p>
-                  </div>
-                </div>
-                <div class="col-md-4 text-center">
-                  <div class="card shadow p-3 bg-body-tertiary rounded">
-                    <img
-                     src="{% static 'images/img-3.jpg' %}"
-                      class="img-fluid rounded-circle mb-2 border mx-auto d-block"
-                      alt="Ms. Sari"
-                      style="width: 100px"
-                    />
-                    <h5>Ms. Sari</h5>
-                    <p>Kepala Pengajar (10 tahun pengalaman)</p>
-=======
-                  </div>
-                  <div class="col-md-4 text-center">
-                    <div class="card shadow p-3 bg-body-tertiary rounded">
-                      <img
-                        src="./assets/images/img-3.jpg"
-                        class="img-fluid rounded-circle mb-2 border mx-auto d-block"
-                        alt="Ms. Sari"
-                        style="width: 100px"
-                      />
-                      <h5>Ms. Sari</h5>
-                      <p>Kepala Pengajar (10 tahun pengalaman)</p>
-                    </div>
-                  </div>
-                  <div class="col-md-4 text-center">
-                    <div class="card shadow p-3 bg-body-tertiary rounded">
-                      <img
-                        src="./assets/images/img-3.jpg"
-                        class="img-fluid rounded-circle mb-2 border mx-auto d-block"
-                        alt="Ms. Sari"
-                        style="width: 100px"
-                      />
-                      <h5>Ms. Sari</h5>
-                      <p>Kepala Pengajar (10 tahun pengalaman)</p>
-                    </div>
->>>>>>> 9b73cad1 (wip: capek pen beli truk)
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="modal-footer button-group d-flex justify-content-between"
-            >
-              <button type="button" class="btn btn-3" data-bs-dismiss="modal">
-                Tutup
-              </button>
-              <button type="button" class="btn btn-2">
-                <i class="bi bi-whatsapp"></i> Hubungi Kami
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--Modal Pre-School Program-->
-      <div
-        class="modal fade"
-        id="infoModalPre-SchoolProgram"
-        tabindex="-1"
-        aria-labelledby="infoModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-xl modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="infoModalLabel">
-                Informasi Lengkap - Pre-School Program
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <div class="row mt-2">
-                <div class="col-md-6">
-                  <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
-                    <h4 class="fw-medium">
-                      <i class="bi bi-cash me-2"></i>Biaya
-                    </h4>
-                    <p class="mt-2">
-                      Kami menawarkan beberapa pilihan paket biaya yang
-                      fleksibel, disesuaikan dengan kebutuhan dan durasi
-                      pendaftaran.
-                    </p>
-                    <ul class="list-unstyled mt-3">
-                      <li
-                        class="d-flex justify-content-between align-items-center mb-3 p-1 bg-white text-dark"
-                      >
-                        <span class="fw-semibold">Part-time (3 hari)</span>
-                        <span class="fw-bold" style="color: red"
-                          >Rp 2.500.000/bulan</span
-                        >
-                      </li>
-                      <hr />
-                      <li
-                        class="d-flex justify-content-between align-items-center mb-3 p-1 bg-white text-dark"
-                      >
-                        <span class="fw-semibold">Full-time (5 hari)</span>
-                        <span class="fw-bold" style="color: red"
-                          >Rp 3.500.000/bulan</span
-                        >
-                      </li>
-                      <hr />
-                      <li
-                        class="d-flex justify-content-between align-items-center mb-3 p-1 bg-white text-dark"
-                      >
-                        <span class="fw-semibold">Drop-in</span>
-                        <span class="fw-bold" style="color: red"
-                          >Rp 250.000/hari</span
-                        >
-                      </li>
-                    </ul>
-                    <h4 class="fw-medium mt-3">
-                      <i class="bi bi-clock-fill me-2"></i>Jadwal
-                    </h4>
-                    <p class="mt-2">
-                      Program Infant Care kami tersedia setiap hari Senin hingga
-                      Jumat, dari pukul 07.00 hingga 18.00.
-                    </p>
-                    <ul class="list-unstyled mt-3">
-                      <li
-                        class="d-flex justify-content-between align-items-center mb-3 p-1 bg-white text-dark"
-                      >
-                        <span class="fw-semibold">Hari Operasional</span>
-                        <span class="fw-bold">Senin - Jumat</span>
-                      </li>
-                      <hr />
-                      <li
-                        class="d-flex justify-content-between align-items-center p-1 bg-white text-dark"
-                      >
-                        <span class="fw-semibold">Jam Layanan</span>
-                        <span class="fw-bold">07.00 - 18.00</span>
-                      </li>
-                    </ul>
-                    <div class="p-3 mb-2 bg-warning text-dark mt-3">
-                      <h4>
-                        <i class="bi bi-exclamation-square-fill me-2"></i
-                        >Informasi
-                      </h4>
-                      <p class="fw-bold">
-                        Kami menghormati hari libur nasional dan hari raya,
-                        sehingga layanan kami akan tutup. Untuk informasi lebih
-                        lanjut, hubungi kami.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="card shadow p-3 bg-body-tertiary rounded">
-                    <h4 class="fw-medium">
-                      <i class="bi bi-shield-shaded me-2"></i>Fasilitas
-                    </h4>
-                    <p class="mt-2">
-                      Fasilitas kami dirancang khusus untuk kenyamanan dan
-                      keamanan bayi:
-                    </p>
-                    <ul class="list-unstyled mt-3">
-                      <div class="p-3 mb-2 bg-body-secondary">
-                        <li class="p-2">
-                          <i class="fa-solid fa-solid fa-shapes me-2"></i
-                          >Ruangan bermain yang luas dan aman
-                        </li>
-                      </div>
-                      <div class="p-3 mb-2 bg-body-secondary">
-                        <li class="p-2">
-                          <i class="fa-solid fa-bed me-2"></i>Area tidur yang
-                          tenang dan bersih
-                        </li>
-                      </div>
-                      <div class="p-3 mb-2 bg-body-secondary">
-                        <li class="p-2">
-                          <i class="fa-solid fa-brain me-2"></i>Peralatan
-                          stimulasi perkembangan terkini
-                        </li>
-                      </div>
-                      <div class="p-3 mb-2 bg-body-secondary">
-                        <li class="p-2">
-                          <i class="bi bi-camera-video-fill me-2"></i>Sistem
-                          pemantauan CCTV untuk keamanan ekstra
-                        </li>
-                      </div>
-                      <div class="p-3 mb-2 bg-body-secondary">
-                        <li class="p-2">
-                          <i class="fa-solid fa-gamepad me-2"></i>Program
-                          pembelajaran berbasis permainan
-                        </li>
-                      </div>
-                      <div class="p-3 mb-2 bg-body-secondary">
-                        <li class="p-2">
-                          <i class="fa-solid fa-paintbrush me-2"></i>Kegiatan
-                          seni dan kreativitas yang mendukung ekspresi diri
-                        </li>
-                      </div>
-                      <div class="p-3 bg-body-secondary">
-                        <li class="p-2">
-                          <i class="fa-solid fa-users me-2"></i>Staf yang ramah
-                          dan berpengalaman
-                        </li>
-                      </div>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <hr />
-              <div class="mt-3">
-                <h4 class="fw-medium">
-                  <i class="fa-solid fa-chalkboard-user me-2"></i>Profil
-                  Pengajar
-                </h4>
-                <div class="row mt-3">
-                  <div class="col-md-4 text-center">
-                    <div class="card shadow p-3 bg-body-tertiary rounded">
-                      <img
-                        src="./assets/images/img-3.jpg"
-                        class="img-fluid rounded-circle mb-2 border mx-auto d-block"
-                        alt="Ms. Sari"
-                        style="width: 100px"
-                      />
-                      <h5>Ms. Sari</h5>
-                      <p>Kepala Pengajar (10 tahun pengalaman)</p>
-                    </div>
-<<<<<<< HEAD
-                    <div class="p-3 mb-2 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="fa-solid fa-bed me-2"></i>Area tidur yang
-                        tenang dan bersih
-                      </li>
-                    </div>
-                    <div class="p-3 mb-2 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="fa-solid fa-brain me-2"></i>Peralatan
-                        stimulasi perkembangan terkini
-                      </li>
-                    </div>
-                    <div class="p-3 mb-2 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="bi bi-camera-video-fill me-2"></i>Sistem
-                        pemantauan CCTV untuk keamanan ekstra
-                      </li>
-                    </div>
-                    <div class="p-3 mb-2 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="fa-solid fa-gamepad me-2"></i>Program
-                        pembelajaran berbasis permainan
-                      </li>
-                    </div>
-                    <div class="p-3 mb-2 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="fa-solid fa-paintbrush me-2"></i>Kegiatan seni
-                        dan kreativitas yang mendukung ekspresi diri
-                      </li>
-                    </div>
-                    <div class="p-3 bg-body-secondary">
-                      <li class="p-2">
-                        <i class="fa-solid fa-users me-2"></i>Staf yang ramah
-                        dan berpengalaman
-                      </li>
-                    </div>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <hr />
-            <div class="mt-3">
-              <h4 class="fw-medium">
-                <i class="fa-solid fa-chalkboard-user me-2"></i>Profil Pengajar
-              </h4>
-              <div class="row mt-3">
-                <div class="col-md-4 text-center">
-                  <div class="card shadow p-3 bg-body-tertiary rounded">
-                    <img
-                      src="{% static 'images/img-3.jpg' %}"
-                      class="img-fluid rounded-circle mb-2 border mx-auto d-block"
-                      alt="Ms. Sari"
-                      style="width: 100px"
-                    />
-                    <h5>Ms. Sari</h5>
-                    <p>Kepala Pengajar (10 tahun pengalaman)</p>
-                  </div>
-                </div>
-                <div class="col-md-4 text-center">
-                  <div class="card shadow p-3 bg-body-tertiary rounded">
-                    <img
-                     src="{% static 'images/img-3.jpg' %}"
-                      class="img-fluid rounded-circle mb-2 border mx-auto d-block"
-                      alt="Ms. Sari"
-                      style="width: 100px"
-                    />
-                    <h5>Ms. Sari</h5>
-                    <p>Kepala Pengajar (10 tahun pengalaman)</p>
-                  </div>
-                </div>
-                <div class="col-md-4 text-center">
-                  <div class="card shadow p-3 bg-body-tertiary rounded">
-                    <img
-                      src="{% static 'images/img-3.jpg' %}"
-                      class="img-fluid rounded-circle mb-2 border mx-auto d-block"
-                      alt="Ms. Sari"
-                      style="width: 100px"
-                    />
-                    <h5>Ms. Sari</h5>
-                    <p>Kepala Pengajar (10 tahun pengalaman)</p>
-=======
-                  </div>
-                  <div class="col-md-4 text-center">
-                    <div class="card shadow p-3 bg-body-tertiary rounded">
-                      <img
-                        src="./assets/images/img-3.jpg"
-                        class="img-fluid rounded-circle mb-2 border mx-auto d-block"
-                        alt="Ms. Sari"
-                        style="width: 100px"
-                      />
-                      <h5>Ms. Sari</h5>
-                      <p>Kepala Pengajar (10 tahun pengalaman)</p>
-                    </div>
-                  </div>
-                  <div class="col-md-4 text-center">
-                    <div class="card shadow p-3 bg-body-tertiary rounded">
-                      <img
-                        src="../assets/images/img-3.jpg"
-                        class="img-fluid rounded-circle mb-2 border mx-auto d-block"
-                        alt="Ms. Sari"
-                        style="width: 100px"
-                      />
-                      <h5>Ms. Sari</h5>
-                      <p>Kepala Pengajar (10 tahun pengalaman)</p>
-                    </div>
->>>>>>> 9b73cad1 (wip: capek pen beli truk)
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="modal-footer button-group d-flex justify-content-between"
-            >
-              <button type="button" class="btn btn-3" data-bs-dismiss="modal">
-                Tutup
-              </button>
-              <button type="button" class="btn btn-2">Hubungi Kami</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--Modal Pre-Kindergarten Program-->
-      <div
-        class="modal fade"
-        id="infoModalPre-KindergartenProgram"
-        tabindex="-1"
-        aria-labelledby="infoModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-xl modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="infoModalLabel">
-                Informasi Lengkap - Pre-Kindergarten Program
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <div class="row mt-2">
-                <div class="col-md-6">
-                  <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
-                    <h4 class="fw-medium">
-                      <i class="bi bi-cash me-2"></i>Biaya
-                    </h4>
-                    <p class="mt-2">
-                      Kami menawarkan beberapa pilihan paket biaya yang
-                      fleksibel, disesuaikan dengan kebutuhan dan durasi
-                      pendaftaran.
-                    </p>
-                    <ul class="list-unstyled mt-3">
-                      <li
-                        class="d-flex justify-content-between align-items-center mb-3 p-1 bg-white text-dark"
-                      >
-                        <span class="fw-semibold">Part-time (3 hari)</span>
-                        <span class="fw-bold" style="color: red"
-                          >Rp 2.500.000/bulan</span
-                        >
-                      </li>
-                      <hr />
-                      <li
-                        class="d-flex justify-content-between align-items-center mb-3 p-1 bg-white text-dark"
-                      >
-                        <span class="fw-semibold">Full-time (5 hari)</span>
-                        <span class="fw-bold" style="color: red"
-                          >Rp 3.500.000/bulan</span
-                        >
-                      </li>
-                      <hr />
-                      <li
-                        class="d-flex justify-content-between align-items-center mb-3 p-1 bg-white text-dark"
-                      >
-                        <span class="fw-semibold">Drop-in</span>
-                        <span class="fw-bold" style="color: red"
-                          >Rp 250.000/hari</span
-                        >
-                      </li>
-                    </ul>
-                    <h4 class="fw-medium mt-3">
-                      <i class="bi bi-clock-fill me-2"></i>Jadwal
-                    </h4>
-                    <p class="mt-2">
-                      Program Infant Care kami tersedia setiap hari Senin hingga
-                      Jumat, dari pukul 07.00 hingga 18.00.
-                    </p>
-                    <ul class="list-unstyled mt-3">
-                      <li
-                        class="d-flex justify-content-between align-items-center mb-3 p-1 bg-white text-dark"
-                      >
-                        <span class="fw-semibold">Hari Operasional</span>
-                        <span class="fw-bold">Senin - Jumat</span>
-                      </li>
-                      <hr />
-                      <li
-                        class="d-flex justify-content-between align-items-center p-1 bg-white text-dark"
-                      >
-                        <span class="fw-semibold">Jam Layanan</span>
-                        <span class="fw-bold">07.00 - 18.00</span>
-                      </li>
-                    </ul>
-                    <div class="p-3 mb-2 bg-warning text-dark mt-3">
-                      <h4>
-                        <i class="bi bi-exclamation-square-fill me-2"></i
-                        >Informasi
-                      </h4>
-                      <p class="fw-bold">
-                        Kami menghormati hari libur nasional dan hari raya,
-                        sehingga layanan kami akan tutup. Untuk informasi lebih
-                        lanjut, hubungi kami.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="card shadow p-3 bg-body-tertiary rounded">
-                    <h4 class="fw-medium">
-                      <i class="bi bi-shield-shaded me-2"></i>Fasilitas
-                    </h4>
-                    <p class="mt-2">
-                      Fasilitas kami dirancang khusus untuk kenyamanan dan
-                      keamanan bayi:
-                    </p>
-                    <ul class="list-unstyled mt-3">
-                      <div class="p-3 mb-2 bg-body-secondary">
-                        <li class="p-2">
-                          <i class="fa-solid fa-solid fa-shapes me-2"></i
-                          >Ruangan bermain yang luas dan aman
-                        </li>
-                      </div>
-                      <div class="p-3 mb-2 bg-body-secondary">
-                        <li class="p-2">
-                          <i class="fa-solid fa-bed me-2"></i>Area tidur yang
-                          tenang dan bersih
-                        </li>
-                      </div>
-                      <div class="p-3 mb-2 bg-body-secondary">
-                        <li class="p-2">
-                          <i class="fa-solid fa-brain me-2"></i>Peralatan
-                          stimulasi perkembangan terkini
-                        </li>
-                      </div>
-                      <div class="p-3 mb-2 bg-body-secondary">
-                        <li class="p-2">
-                          <i class="bi bi-camera-video-fill me-2"></i>Sistem
-                          pemantauan CCTV untuk keamanan ekstra
-                        </li>
-                      </div>
-                      <div class="p-3 mb-2 bg-body-secondary">
-                        <li class="p-2">
-                          <i class="fa-solid fa-gamepad me-2"></i>Program
-                          pembelajaran berbasis permainan
-                        </li>
-                      </div>
-                      <div class="p-3 mb-2 bg-body-secondary">
-                        <li class="p-2">
-                          <i class="fa-solid fa-paintbrush me-2"></i>Kegiatan
-                          seni dan kreativitas yang mendukung ekspresi diri
-                        </li>
-                      </div>
-                      <div class="p-3 bg-body-secondary">
-                        <li class="p-2">
-                          <i class="fa-solid fa-users me-2"></i>Staf yang ramah
-                          dan berpengalaman
-                        </li>
-                      </div>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <hr />
-              <div class="mt-3">
-                <h4 class="fw-medium">
-                  <i class="fa-solid fa-chalkboard-user me-2"></i>Profil
-                  Pengajar
-                </h4>
-                <div class="row mt-3">
-                  <div class="col-md-4 text-center">
-                    <div class="card shadow p-3 bg-body-tertiary rounded">
-                      <img
-                        src="./assets/images/img-3.jpg"
-                        class="img-fluid rounded-circle mb-2 border mx-auto d-block"
-                        alt="Ms. Sari"
-                        style="width: 100px"
-                      />
-                      <h5>Ms. Sari</h5>
-                      <p>Kepala Pengajar (10 tahun pengalaman)</p>
-                    </div>
-                  </div>
-                  <div class="col-md-4 text-center">
-                    <div class="card shadow p-3 bg-body-tertiary rounded">
-                      <img
-                        src="./assets/images/img-3.jpg"
-                        class="img-fluid rounded-circle mb-2 border mx-auto d-block"
-                        alt="Ms. Sari"
-                        style="width: 100px"
-                      />
-                      <h5>Ms. Sari</h5>
-                      <p>Kepala Pengajar (10 tahun pengalaman)</p>
-                    </div>
-                  </div>
-                  <div class="col-md-4 text-center">
-                    <div class="card shadow p-3 bg-body-tertiary rounded">
-                      <img
-                        src="./assets/images/img-3.jpg"
-                        class="img-fluid rounded-circle mb-2 border mx-auto d-block"
-                        alt="Ms. Sari"
-                        style="width: 100px"
-                      />
-                      <h5>Ms. Sari</h5>
-                      <p>Kepala Pengajar (10 tahun pengalaman)</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="modal-footer button-group d-flex justify-content-between"
-            >
-              <button type="button" class="btn btn-3" data-bs-dismiss="modal">
-                Tutup
-              </button>
-              <button type="button" class="btn btn-2">
-                <i class="bi bi-whatsapp"></i> Hubungi Kami
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <!--Footer-->
-    <footer class="container-footer footer">
-      <div class="pt-4 p-5">
-        <div class="row">
-          <div class="col-md-4">
-            <ul class="list1">
-              <li><a href="aboutus.html#siapakami">Tentang Kami</a></li>
-              <li><a href="form_booking.html">Pendaftaran</a></li>
-              <li><a href="index.html#testimoni">Testimoni</a></li>
-              <li><a href="contactus.html#faqq">FAQ</a></li>
-              <li><a href="contactus.html#konsultasi">Konsultasi</a></li>
-              <li><a href="index.html#fasilitas">Fasilitas</a></li>
-              <li><a href="aboutus.html#galeri">Galeri</a></li>
-            </ul>
-          </div>
-          <!-- footer column 2 -->
-          <div class="col-md-4">
-            <h4>Paket Kami</h4>
-            <ul class="list2">
-              <li><a href="programs.html#infant">Infant Care</a></li>
-              <li><a href="programs.html#toddler">Toddler Program</a></li>
-              <li><a href="programs.html#preschool">Pre-School Program</a></li>
-              <li><a href="programs.html#prekind">Pre-Kindergarten</a></li>
-              <li><a href="programs.html#upcoming">Upcoming Events</a></li>
-              <li>
-                <a href="programs.html#program-lainnya">Program Lainnya</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <h4>Kontak Kami</h4>
-            <ul class="list4">
-              <li>
-                <i class="bi bi-geo-alt me-2"></i>
-                Jl.Mawar No 123, Jakarta, Indonesia
-              </li>
-=======
           <div class="col-md-6">
             <h5 class="fs-3 fw-bolder pb-2">
               Junior Chef Cooking Competition: Hai Moms, Siapkan Si Kecil
@@ -2557,7 +698,6 @@
             <p class="fw-medium">
               Jangan lewatkan kesempatan emas ini! Daftarkan Si Kecil sekarang
               dan saksikan mereka bersinar di panggung dapur! 🌟
->>>>>>> 3ce7539d (wip: forms competition)
               <br />
               Yuk, moms! Ayo ajak Si Kecil untuk ikut berpartisipasi dan
               tunjukkan bakatnya! 🍽️✨
@@ -2663,288 +803,182 @@
     </section>
     <!--Modal Area Button-->
     <!--Modal Button Seminar Parenting-->
-    <div
-      class="modal fade"
-      id="parentingSeminarModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-fullscreen-xxl-down modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="parentingSeminarModalLabel">
-              Seminar Parenting Yang Akan Datang
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <table class="table table-bordered">
-              <thead>
-                <tr>
-                  <th>Tanggal</th>
-                  <th>Judul Seminar</th>
-                  <th>Pemateri</th>
-                  <th>Info Book</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>25 Oktober 2024</td>
-                  <td>Teknik Pengasuhan Anak Usia Dini</td>
-                  <td>Dr.Siti Aminah, Psikolog</td>
-                  <td>
-                    <button class="btn btn-primary btn-sm">
-                      Tiket Tersedia
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>5 November 2024</td>
-                  <td>Memahami Kesehatan Mental Anak</td>
-                  <td>Dr. Budi Setiawan, Sp.KJ</td>
-                  <td>
-                    <button class="btn btn-warning btn-sm">
-                      Tiket Hampir Habis
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>15 November 2024</td>
-                  <td>Pendidikan Karakter pada Anak</td>
-                  <td>Dr. Rina Kartika, M.Psi</td>
-                  <td>
-                    <button class="btn btn-danger btn-sm" disabled>
-                      Tiket Habis Terjual
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>22 November 2024</td>
-                  <td>Komunikasi Efektif dalam Keluarga</td>
-                  <td>Dr. Lina Maulida, M.A</td>
-                  <td>
-                    <button class="btn btn-primary btn-sm">
-                      Tiket Tersedia
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>25 November 2024</td>
-                  <td>Strategi Menghadapi Perilaku Anak</td>
-                  <td>Dr. Joko Prasetyo, M.Si</td>
-                  <td>
-                    <button class="btn btn-primary btn-sm">
-                      Tiket Tersedia
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1 Desember 2024</td>
-                  <td>Membangun Hubungan Positif dengan Anak</td>
-                  <td>Dr. Andi Susanto, M.Pd</td>
-                  <td>
-                    <button class="btn btn-primary btn-sm">
-                      Tiket Tersedia
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="modal-footer button-group">
-            <button type="button" class="btn btn-1" data-bs-dismiss="modal">
-              Close
-            </button>
-          </div>
+    <div class="modal fade" id="parentingSeminarModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-xxl-down modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="parentingSeminarModalLabel">Seminar Parenting Yang Akan Datang</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Tanggal</th>
+                <th>Judul Seminar</th>
+                <th>Pemateri</th>
+                <th>Info Book</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>25 Oktober 2024</td>
+                <td>Teknik Pengasuhan Anak Usia Dini</td>
+                <td>Dr.Siti Aminah, Psikolog</td>
+                <td><button class="btn btn-primary btn-sm">Tiket Tersedia</button></td>
+              </tr>
+              <tr>
+                <td>5 November 2024</td>
+                <td>Memahami Kesehatan Mental Anak</td>
+                <td>Dr. Budi Setiawan, Sp.KJ</td>
+                <td><button class="btn btn-warning btn-sm">Tiket Hampir Habis</button></td>
+              </tr>
+              <tr>
+                <td>15 November 2024</td>
+                <td>Pendidikan Karakter pada Anak</td>
+                <td>Dr. Rina Kartika, M.Psi</td>
+                <td><button class="btn btn-danger btn-sm" disabled>Tiket Habis Terjual</button></td>
+              </tr>
+              <tr>
+                <td>22 November 2024</td>
+                <td>Komunikasi Efektif dalam Keluarga</td>
+                <td>Dr. Lina Maulida, M.A</td>
+                <td><button class="btn btn-primary btn-sm">Tiket Tersedia</button></td>
+              </tr>
+              <tr>
+                <td>25 November 2024</td>
+                <td>Strategi Menghadapi Perilaku Anak</td>
+                <td>Dr. Joko Prasetyo, M.Si</td>
+                <td><button class="btn btn-primary btn-sm">Tiket Tersedia</button></td>
+              </tr>
+              <tr></tr>
+              <td>1 Desember 2024</td>
+              <td>Membangun Hubungan Positif dengan Anak</td>
+              <td>Dr. Andi Susanto, M.Pd</td>
+              <td><button class="btn btn-primary btn-sm">Tiket Tersedia</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
-    <!--Modal Button Cooking Class-->
-    <div
-      class="modal fade"
-      id="cookingClassModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-fullscreen-xxl-down modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="cookingClassModalLabel">
-              Cooking Class Yang Akan Datang
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <table class="table table-bordered">
-              <thead>
-                <tr>
-                  <th>Tanggal</th>
-                  <th>Judul Kelas</th>
-                  <th>Pemateri</th>
-                  <th>Info Book</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1 November 2024</td>
-                  <td>Dasar-dasar Memasak untuk Anak</td>
-                  <td>Chef Ani Pratiwi</td>
-                  <td>
-                    <button class="btn btn-primary btn-sm">
-                      Tiket Tersedia
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>8 November 2024</td>
-                  <td>Makanan Sehat dan Lezat untuk Anak</td>
-                  <td>Chef Budi Santoso</td>
-                  <td>
-                    <button class="btn btn-warning btn-sm">
-                      Tiket Hampir Habis
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>15 November 2024</td>
-                  <td>Snack Sehat yang Mudah Dibuat</td>
-                  <td>Chef Rina Mulyani</td>
-                  <td>
-                    <button class="btn btn-primary btn-sm">
-                      Tiket Tersedia
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>22 November 2024</td>
-                  <td>Menu Kreatif untuk Picky Eaters</td>
-                  <td>Chef Taufik Hidayat</td>
-                  <td>
-                    <button class="btn btn-danger btn-sm" disabled>
-                      Tiket Habis Terjual
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>29 November 2024</td>
-                  <td>Pentingnya Nutrisi Seimbang untuk Anak</td>
-                  <td>Chef Siti Rahmawati</td>
-                  <td>
-                    <button class="btn btn-primary btn-sm">
-                      Tiket Tersedia
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="modal-footer button-group">
-            <button type="button" class="btn btn-1" data-bs-dismiss="modal">
-              Close
-            </button>
+  </div>
+      <!--Modal Button Cooking Class-->
+      <div class="modal fade" id="cookingClassModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-xxl-down modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="cookingClassModalLabel">Cooking Class Yang Akan Datang</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Tanggal</th>
+                    <th>Judul Kelas</th>
+                    <th>Pemateri</th>
+                    <th>Info Book</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1 November 2024</td>
+                    <td>Dasar-dasar Memasak untuk Anak</td>
+                    <td>Chef Ani Pratiwi</td>
+                    <td><button class="btn btn-primary btn-sm">Tiket Tersedia</button></td>
+                  </tr>
+                  <tr>
+                    <td>8 November 2024</td>
+                    <td>Makanan Sehat dan Lezat untuk Anak</td>
+                    <td>Chef Budi Santoso</td>
+                    <td><button class="btn btn-warning btn-sm">Tiket Hampir Habis</button></td>
+                  </tr>
+                  <tr>
+                    <td>15 November 2024</td>
+                    <td>Snack Sehat yang Mudah Dibuat</td>
+                    <td>Chef Rina Mulyani</td>
+                    <td><button class="btn btn-primary btn-sm">Tiket Tersedia</button></td>
+                  </tr>
+                  <tr>
+                    <td>22 November 2024</td>
+                    <td>Menu Kreatif untuk Picky Eaters</td>
+                    <td>Chef Taufik Hidayat</td>
+                    <td><button class="btn btn-danger btn-sm" disabled>Tiket Habis Terjual</button></td>
+                  </tr>
+                  <tr>
+                    <td>29 November 2024</td>
+                    <td>Pentingnya Nutrisi Seimbang untuk Anak</td>
+                    <td>Chef Siti Rahmawati</td>
+                    <td><button class="btn btn-primary btn-sm">Tiket Tersedia</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!--Modal Button Children's Work Exhibitions-->
-    <div
-      class="modal fade"
-      id="childrenWorkExhibitions"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-fullscreen-xxl-down modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="childrenWorkExhibitionsLabel">
-              Pameran Yang Akan Datang
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <table class="table table-bordered">
-              <thead>
-                <tr>
-                  <th>Tanggal</th>
-                  <th>Judul Pameran</th>
-                  <th>Deskripsi</th>
-                  <th>Info Pendaftaran</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>10 Januari 2025</td>
-                  <td>Pameran Karya Seni Anak</td>
-                  <td>
-                    Pameran seni lukis dan kerajinan tangan oleh anak-anak.
-                  </td>
-                  <td>
-                    <button class="btn btn-primary btn-sm">
-                      Daftar Sekarang
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>17 Januari 2025</td>
-                  <td>Pameran Inovasi Anak</td>
-                  <td>
-                    Pameran inovasi dan proyek kreatif dari anak-anak sekolah.
-                  </td>
-                  <td>
-                    <button class="btn btn-warning btn-sm">
-                      Tempat Terbatas
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>24 Januari 2025</td>
-                  <td>Pameran Talenta Anak</td>
-                  <td>Pameran bakat anak dalam bidang musik dan tari.</td>
-                  <td>
-                    <button class="btn btn-danger btn-sm" disabled>
-                      Pendaftaran Tutup
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>31 Januari 2025</td>
-                  <td>Pameran Sains Anak</td>
-                  <td>Pameran eksperimen sains dan penemuan oleh anak-anak.</td>
-                  <td>
-                    <button class="btn btn-primary btn-sm">
-                      Daftar Sekarang
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="modal-footer button-group">
-            <button type="button" class="btn btn-1" data-bs-dismiss="modal">
-              Close
-            </button>
+      <!--Modal Button Children's Work Exhibitions-->
+      <div class="modal fade" id="childrenWorkExhibitions" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-xxl-down modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="childrenWorkExhibitionsLabel">Pameran Yang Akan Datang</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Tanggal</th>
+                    <th>Judul Pameran</th>
+                    <th>Deskripsi</th>
+                    <th>Info Pendaftaran</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10 Januari 2025</td>
+                    <td>Pameran Karya Seni Anak</td>
+                    <td>Pameran seni lukis dan kerajinan tangan oleh anak-anak.</td>
+                    <td><button class="btn btn-primary btn-sm">Daftar Sekarang</button></td>
+                  </tr>
+                  <tr>
+                    <td>17 Januari 2025</td>
+                    <td>Pameran Inovasi Anak</td>
+                    <td>Pameran inovasi dan proyek kreatif dari anak-anak sekolah.</td>
+                    <td><button class="btn btn-warning btn-sm">Tempat Terbatas</button></td>
+                  </tr>
+                  <tr>
+                    <td>24 Januari 2025</td>
+                    <td>Pameran Talenta Anak</td>
+                    <td>Pameran bakat anak dalam bidang musik dan tari.</td>
+                    <td><button class="btn btn-danger btn-sm" disabled>Pendaftaran Tutup</button></td>
+                  </tr>
+                  <tr>
+                    <td>31 Januari 2025</td>
+                    <td>Pameran Sains Anak</td>
+                    <td>Pameran eksperimen sains dan penemuan oleh anak-anak.</td>
+                    <td><button class="btn btn-primary btn-sm">Daftar Sekarang</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     <!--Modal Button Cooking Competition-->
     <div
       class="modal fade"
@@ -2967,9 +1001,8 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form method="post">
-              {% csrf_token %} {{ competition_form }}
-              <!-- <div class="mb-3">
+            <form>
+              <div class="mb-3">
                 <label for="full-name" class="col-form-label"
                   >Nama Lengkap Anak:</label
                 >
@@ -3019,14 +1052,18 @@
                     ketentuan yang berlaku.
                   </label>
                 </div>
-              </div> -->
+              </div>
             </form>
           </div>
-          <div class="modal-footer button-group">
-            <button type="button" class="btn btn-3" data-bs-dismiss="modal">
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
               Kembali
             </button>
-            <button type="submit" class="btn btn-1">Ikut Lomba</button>
+            <button type="button" class="btn btn-primary">Ikut Lomba</button>
           </div>
         </div>
       </div>
@@ -3193,7 +1230,7 @@
                 <div class="col-md-4 text-center">
                   <div class="card shadow p-3 bg-body-tertiary rounded">
                     <img
-                      src="{% static 'images/img-1.jpg' %}"
+                      src="{% static 'images/img-3.jpg' %}"
                       class="img-fluid rounded-circle mb-2 border mx-auto d-block"
                       alt="Ms. Sari"
                       style="width: 100px"
@@ -3205,7 +1242,7 @@
                 <div class="col-md-4 text-center">
                   <div class="card shadow p-3 bg-body-tertiary rounded">
                     <img
-                      src="{% static 'images/img-2.jpg' %}"
+                      src="{% static 'images/img-3.jpg' %}"
                       class="img-fluid rounded-circle mb-2 border mx-auto d-block"
                       alt="Ms. Sari"
                       style="width: 100px"
@@ -3631,7 +1668,7 @@
                 <div class="col-md-4 text-center">
                   <div class="card shadow p-3 bg-body-tertiary rounded">
                     <img
-                      src="{% static 'images/img-4.jpg' %}"
+                      src="{% static 'images/img-3.jpg' %}"
                       class="img-fluid rounded-circle mb-2 border mx-auto d-block"
                       alt="Ms. Sari"
                       style="width: 100px"
@@ -3824,7 +1861,7 @@
                 <div class="col-md-4 text-center">
                   <div class="card shadow p-3 bg-body-tertiary rounded">
                     <img
-                      src="{% static 'images/img-2.jpg' %}"
+                      src="{% static 'images/img-3.jpg' %}"
                       class="img-fluid rounded-circle mb-2 border mx-auto d-block"
                       alt="Ms. Sari"
                       style="width: 100px"
@@ -3860,7 +1897,7 @@
       </div>
     </div>
   </main>
-  <!--Footer-->
+
   <!-- link icon bostrap -->
   <link
     rel="stylesheet"
@@ -3869,23 +1906,8 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   <!--Jquery-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="{% static 'js/programs.js' %}"></script>
 </body>
 {% endblock %}
-=======
-    <script src="./assets/js/programs.js"></script>
-  </body>
-</html>
->>>>>>> 9b73cad1 (wip: capek pen beli truk)
-=======
-  <!--Jquery-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-  <script src="{% static 'js/programs.js' %}"></script>
-</body>
-{% endblock %}
->>>>>>> 3ce7539d (wip: forms competition)
