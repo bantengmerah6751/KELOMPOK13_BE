@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="stylesheet" href="./assets/css/style_log-in_&_sign-up.css" />
+  <link rel="stylesheet" href="{% static 'css/style_log-in_&_sign-up.css' %}" />
   <title>Log-in</title>
 </head>
 
@@ -20,14 +19,14 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
 </svg>
-    <a href="index.html" class="link">Back Home</a>
+    <a href="{% url 'home:home' %}" class="link">Back Home</a>
   </div>
   <div class="content">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-auto">
           <div class="picture">
-            <img src="assets/images/img.png" class="img-fluid img" alt="...">
+            <img src="{% static 'images/img.png' %}" class="img-fluid img" alt="...">
           </div>
         </div>
         <div class="col-md-auto">
@@ -60,7 +59,7 @@
                 <a href="forgot.html" class="link" style="font-size: 70%; padding-left: 50%">Forgot Password?</a>
               </div>
               <div class="submit">
-                <button href="./homepage.html" type="submit" class="btn">
+                <button href="{% url 'home:home' %}" type="submit" class="btn">
                   Log In
                 </button>
               </div>
@@ -76,7 +75,7 @@
               </button>
               <p style="padding-top: 10px">
                 Belum punya akun?
-                <a class="link" href="./signup.html">Sign Up</a>
+                <a class="link" href="{% url 'users:signup' %}">Sign Up</a>
               </p>
             </div>
           </div>
@@ -96,7 +95,7 @@
         </div>
       </div>
     </div>
-    <script src="{% static ' js/log-in.js ' %}"></script>
+    <script src="{% static 'js/log-in.js' %}"></script>
 </body>
 
 </html>

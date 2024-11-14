@@ -92,7 +92,7 @@
             </div>
           </div>
           <div class="d-flex align-items-center" id="loginForm">
-            <a href="./login.html" class="signup-button p-2 me-2" id="getLogin"
+            <a href="{% url 'users:login' %}" class="signup-button p-2 me-2"
               >Open Your Account</a
             >
             <button
@@ -109,6 +109,61 @@
         </div>
       </nav>
     </header>
+    <!-- pop up login -->
+    <div
+      class="modal fade"
+      id="verificationModal2"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalLabel"
+      aria-hidden="true"
+    >
+      <div class="box modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="d-flex justify-content-end mt-3 me-3">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div
+            class="modal-body2 d-flex flex-column align-items-center text-center"
+          >
+            <img
+              class="verified rounded-3"
+              src="./assets/images/popup-login2.png"
+              alt="Verified"
+              width="270"
+              height="auto"
+            />
+            <div>
+              <h2>Oops!</h2>
+              <p style="max-width: 600px">
+                <span>Anda belum punya akun!</span> Daftar sekarang dan dapatkan
+                berbagai fitur dan event yang menarik bersama kami.
+              </p>
+              <div
+                class="button-group d-flex flex-column justify-content-center align-items-center"
+              >
+                <button
+                  type="button"
+                  class="btn btn-1 close-btn3 mb-2 p-2"
+                  data-dismiss="modal"
+                  style="font-size: 17px; max-width: 300px"
+                >
+                  Next to Page
+                </button>
+                <p class="text-secondary" style="font-size: 15px">
+                  Tab untuk membuat akun anda!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     {% comment %} content {% endcomment %}
     <body>
       {% block body_block %} {% endblock %}
@@ -206,6 +261,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <!-- js -->
+    <script src="{% static 'js/home.js' %}"></script>
   </body>
 </html>

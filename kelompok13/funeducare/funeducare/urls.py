@@ -23,12 +23,15 @@ from payments import views
 from pendaftaran import views
 from profil import views
 from programs import views
+from users import views
 
 urlpatterns = [
     
     path('admin/', admin.site.urls),
-    path('contactus/', include('contactus.urls')),
     path('', include('home.urls')),
+    path('contactus/', include('contactus.urls')),
     path('aboutus/', include('aboutus.urls')),
     path('programs/', include('programs.urls')),
+    path('users/', include('users.urls')),
+   
 ]
