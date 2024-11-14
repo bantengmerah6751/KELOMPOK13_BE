@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>base</title>
+    <title>funeducare</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {% load static %}
@@ -24,15 +24,17 @@
   <body>
     <!-- navbar -->
     <header>
-      {% load static %}
-
       <nav class="navbar navbar-expand-lg fixed-top">
         <div
           class="container-fluid me-3 ms-3 rounded-5"
           style="background-color: #cfcfcf"
         >
           <a class="navbar-brand me-auto p-3" href="#">
-            <img src="" alt="logo" width="40px" />
+            <img
+              src="{% static 'images/logo2.png' %}"
+              alt="logo"
+              width="40px"
+            />
           </a>
           <div
             class="offcanvas offcanvas-end text-center"
@@ -44,7 +46,7 @@
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
                 <img
-                  src="./assets/images/logo2.png"
+                  src="{% static 'images/logo2.png' %}"
                   alt="logo"
                   class="logo-small"
                 />
@@ -107,11 +109,11 @@
         </div>
       </nav>
     </header>
-
+    {% comment %} content {% endcomment %}
     <body>
       {% block body_block %} {% endblock %}
     </body>
-
+    {% comment %} content {% endcomment %}
     <footer class="container-footer footer">
       <div class="pt-4 p-5">
         <div class="row">
