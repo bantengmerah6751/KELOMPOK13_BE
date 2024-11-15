@@ -23,21 +23,19 @@
 </svg>
     <a href="{% url 'home:home' %}" class="link">Back Home</a>
   </div>
-{% comment %} alert {% endcomment %}
-  <div class="container mt-3">
-    {% if messages %}
-        <div class="alert-container">
-            {% for message in messages %}
-                <div class="alert alert-{{ message.tags }} alert-dismissible alert-succes fade show" role="alert">
-                    {{ message }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            {% endfor %}
-        </div>
+  {% if messages %}
+                  <div class="alert-container">
+                      {% for message in messages %}
+                          <div class="alert alert-{{ message.tags }} alert-dismissible alert-succes fade show" role="alert">
+                              {{ message }}
+                              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                          </div>
+                      {% endfor %}
+                  </div>
     {% endif %}
 
 </div>
-  <div class="content">
+  <div class="content col-md-auto">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-auto">
@@ -47,39 +45,29 @@
         </div>
         <div class="col-md-auto">
           <div class="form">
-            <form action="./index.html" id="loginForm">
-              <div class="box">
-                <h1 class="animate__animated animate__fadeInUp">Selamat Datang di FunEduCare!</h1>
-                <p>
-                  Masuk untuk memantau perkembangan dan aktivitas belajar si
-                  kecil.
-                </p>
-              </div>
+            <div class="box p-3">
+              <h1 class="animate__animated animate__fadeInUp">Selamat Datang di FunEduCare!</h1>
+              <p>
+                Masuk untuk memantau perkembangan dan aktivitas belajar si
+                kecil.
+              </p>
+            </div>
+            <form method="POST">
+              {% csrf_token %}
               <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" placeholder="Masukkan Email Anda" class="form-control" id="email" name="email"
-                  required />
+                {{ form.username.label_tag }}
+                {{ form.username }}
               </div>
+          
               <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" placeholder="Masukkan Password Anda" class="form-control" id="password"
-                  name="password" required />
+                {{ form.password.label_tag }}
+                {{ form.password }}
               </div>
-              <div style="display: flex">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                  <label style="font-size: 70%" class="form-check-label" for="flexCheckDefault">
-                    Remember Me
-                  </label>
-                </div>
-                <a href="forgot.html" class="link" style="font-size: 70%; padding-left: 50%">Forgot Password?</a>
-              </div>
-              <div class="submit">
-                <button href="{% url 'home:home' %}" type="submit" class="btn">
-                  Log In
-                </button>
-              </div>
-            </form>
+              <a href="forgot.html" class="link text-end " style="font-size: 15px; ">Forgot Password?</a>
+              <button type="submit" class="btn btn-primary mt-2">Login</button>
+          </form>
+          
+          
             <div class="submit-2">
               <button href="#" type="submit" class="btn-gg">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-google"
@@ -89,13 +77,14 @@
                 </svg>
                 Sign in with Google
               </button>
-              <p style="padding-top: 10px">
+              <p style="padding-top: 10px; font-size:15px" >
                 Belum punya akun?
                 <a class="link" href="{% url 'users:signup' %}">Sign Up</a>
               </p>
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
 

@@ -1,19 +1,17 @@
 // scroll explore
 $(document).ready(function () {
   $("#scrollButton").on("click", function (event) {
-    event.preventDefault(); // Mencegah default action
+    event.preventDefault();
     $("html, body").animate(
       {
-        scrollTop: $("#marqueForm").offset().top, // Mengatur scroll ke posisi bagian tujuan
+        scrollTop: $("#marqueForm").offset().top,
       },
       1500
-    ); // Durasi animasi dalam milidetik
+    );
   });
 });
 
-// js jquery membuat teks disembunyikan content-4
 $(document).ready(function () {
-  // Membuat array yang berisi ID dari semua tombol 'Tampilkan lebih banyak'
   const readMoreButtons = [
     "readMoreBtn1",
     "readMoreBtn2",
@@ -23,7 +21,6 @@ $(document).ready(function () {
     "readMoreBtn6",
   ];
 
-  // Melakukan iterasi pada setiap ID tombol di dalam array
   readMoreButtons.forEach((buttonId) => {
     $(`#${buttonId}`).on("click", function () {
       const index = buttonId.charAt(buttonId.length - 1);
@@ -45,27 +42,6 @@ $(document).ready(function () {
   });
 });
 
-//js-jquery form hubungi kami content-6
-$(document).ready(function () {
-  $("#contactForm").on("submit", function (event) {
-    event.preventDefault(); // Mencegah pengiriman form
-
-    // Validasi form
-    if (
-      $("#nameInput").val() === "" ||
-      $("#genderInput").val() === "" ||
-      $("#emailInput").val() === "" ||
-      $("#phoneInput").val() === "" ||
-      $("#addressInput").val() === ""
-    ) {
-      alert("Terjadi kesalahan, mohon lengkapi field!");
-    } else {
-      alert("Jawaban anda berhasil dikirim!");
-      // Di sini Anda bisa menambahkan logika untuk mengirim data ke server
-      $(this).trigger("reset"); // Reset form setelah pengiriman
-    }
-  });
-});
 // back to top
 $(document).ready(function () {
   // Menampilkan atau menyembunyikan tombol saat menggulir
@@ -115,19 +91,17 @@ $(document).ready(function () {
   });
 
   $("#waliForm").on("submit", function (event) {
-    event.preventDefault(); // Mencegah form dari pengiriman default
-    showModal(); // Menampilkan modal
+    event.preventDefault();
+    showModal();
   });
-  // Menutup modal hanya jika tombol OK diklik
+
   $(".close").on("click", function () {
     $("#verificationModal").modal("hide");
   });
   $(".close-btn").on("click", function () {
-    // Setelah modal ditutup, pindahkan pengguna ke halaman homepage.html
-    window.location.href = "login.html"; // Pindah ke halaman homepage.html
+    window.location.href = "login.html";
   });
 });
-//
 
 // animasi pop up form login
 $(document).ready(function () {

@@ -10,6 +10,17 @@
       <!-- content1 -->
         <section class="container content-1 mt-5">
           <div class="col-12 p-5">
+            <div class="container mt-3">
+              {% if messages %}
+                  <div class="alert-container">
+                      {% for message in messages %}
+                          <div class="alert alert-{{ message.tags }} alert-dismissible alert-succes fade show" role="alert">
+                              {{ message }}
+                              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                          </div>
+                      {% endfor %}
+                  </div>
+              {% endif %}
             <div class="row justify-content-center mt-1 ">
               <div class="text-content col-12 col-lg-6 text-start ">
                 <h1 class="mt-5 col-sm-12">Your Presence
@@ -30,7 +41,7 @@
               </div>
             </div>
 
-            <div class="contentlower col-12 d-flex rounded-4 mb-5">
+            <div class="contentlower col-12 d-flex rounded-4 mb-5 p-3">
               <div class="row w-100 text-center">
                 <div
                   class="tb1 col-12 col-md-4 d-flex align-items-center justify-content-center rounded-3">
@@ -62,6 +73,8 @@
           </div>
         </section>
       <!-- content1.2 -->
+       {% comment %} alert {% endcomment %}
+  
         <section class="container">
           <div class="marquee-container content-1-2 mb-5" id="marqueForm">
             <div class="marquee">
@@ -638,15 +651,15 @@
         </section>
       </main>
       <!-- link jqeury -->
-
+      <!-- js -->
+      <script src="{% static 'js/home.js' %}"></script>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <!-- link js-bootstrap -->
       <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-      <!-- js -->
-      <script src="{% static 'js/home.js' %}"></script>
+      
       {% endblock %}
     </body>
  

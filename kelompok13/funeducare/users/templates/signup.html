@@ -46,11 +46,11 @@
       </svg>
       <a href="{% url 'users:login' %}" class="link">Back Log-In</a>
     </div>
-    <div class="container mt-3">
+    <div class="container mt-2">
       {% if messages %}
           <div class="alert-container ">
               {% for message in messages %}
-                  <div class="alert alert-{{ message.tags }} alert-dismissible alert-danger fade show" role="alert">
+                  <div class="alert alert-{{ message.tags }} alert-dismissible alert-danger a fade show" role="alert">
                       {{ message }}
                       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                   </div>
@@ -63,7 +63,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-auto">
-            <div class="picture align-items-center">
+            <div class="picture ">
               <img
                 src="{% static 'images/img.png' %}"
                 class="img-fluid img"
@@ -72,20 +72,17 @@
             </div>
           </div>
           <div class="col-md-auto">
-            <div class="form">
+            <div class="form" style="margin-top:-30px;">
               <form
                 action="{% url 'users:signup' %}"
                 id="signinForm"
-                method="post"
+                method="post"           
               >
                 {% csrf_token %}
                 <div class="box">
                   <h1 class="animate__animated animate__fadeInUp">
-                    Selamat Datang di FunEduCare!
-                  </h1>
-                  <p>
-                    Gabung untuk pengalaman belajar terbaik untuk anak Anda!
-                  </p>
+                   Daftarkan akun Anda!
+                  </h1>             
                 </div>
                 <div class="mb-2">
                   <label for="username" class="form-label">Username</label>
@@ -95,11 +92,10 @@
                   <label for="email" class="form-label">Email</label>
                   {{ form.email }}
                 </div>
-                <div class="mb-2">
-                  <label for="password1" class="form-label">Password</label>
+                <div class="">                
+                  <label for="password" class="form-label">Password</label>
+                  <p style="font-size:15px" class="text-danger">Password Minimal 8 karakter!</p>
                   {{ form.password1 }}
-
-                  <p style="margin-top: 5px">Minimal 6 karakter</p>
                 </div>
                 <div class="mb-2">
                   <label for="password" class="form-label"
