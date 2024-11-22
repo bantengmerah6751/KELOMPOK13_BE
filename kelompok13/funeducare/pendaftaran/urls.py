@@ -1,6 +1,8 @@
 from django.urls import path
-from . import views
+from pendaftaran import views
 
+app_name = 'pendaftaran'
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.pendaftaran, name='pendaftaran'),  # Form pendaftaran
+    path('syarat/', views.syarat, name='syarat'),
 ]
