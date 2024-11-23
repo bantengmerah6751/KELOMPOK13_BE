@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+{% load static %}
+{% load custom_filters %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ detail.judul }}</title>
+  <!-- css -->
+   <link rel="stylesheet" href="{% static 'css/home-style.css' %}" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <!-- js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/fasilitas-style.css">
+</head>
+
+<body>
+  <!-- konten -->
+   <main>
+    <section class="container ">
+      <div class="p-5">
+      <div class="row ">
+        <div class="head-content d-flex flex-row col-8">
+          <a href="{% url 'home:home' %}"><h5>HOME</h5></a>
+          <span class="me-3 ms-3"> > </span>
+          <a href="{% url 'home:fasilitas' %}"><h5>FASILITAS</h5></a>
+          <span class="me-3 ms-3"> > </span>
+          <h5>{{ detail.judul }}</h5>
+        </div>
+      </div><br>
+        <div class="col-12 d-flex flex-column flex-lg-row ">
+          <div class="title-content d-flex flex-column col-12 col-lg-8">
+            <h4 class="mb-3">{{ detail.judul }}</h4>
+            <img src="{{ detail.foto.url }}" alt="{{ detail.judul }}">
+            <h5 class="mt-4 mb-3 ml-2">Fasilitas yang kami tawarkan!</h5>
+            {% for paragraf in detail.deskripsi|split_paragraphs %}
+              <p>{{ paragraf }}</p>
+            {% endfor %}
+          </div>
+          <div class="list-content d-flex flex-column col-12 col-lg-5">
+            <h3 class="p-4">Fasilitas Terkait Lainnya</h3>
+            <div class="pt-0 p-5">
+              {% for item in all %}
+              <div class="col-12 pb-3">
+                <h5 class="mb-3">{{ item.judul }}</h5>
+                <p>{{ item.deskripsi|truncatechars:100 }}</p>
+                <a href="{% url 'home:detail' item.id %}">Selengkapnya ></a>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="container-footer footer">
+    <div class="pt-4 p-5">
+      <div class="row">
+        <div class="col-md-4">
+          <ul class="list1">
+            <li>
+              <a href="{% url 'aboutus:aboutus' %}#siapakami">Tentang Kami</a>
+            </li>
+            <li><a href="{% url 'programs:programs' %}">Pendaftaran</a></li>
+            <li>
+              <a href="{% url 'home:home' %}#testimonialCarousel"
+                >Testimoni</a
+              >
+            </li>
+            <li>
+              <a href="{% url 'contactus:contactus' %}#faq-list">FAQ</a>
+            </li>
+            <li>
+              <a href="{% url 'contactus:contactus' %}#konsultasi"
+                >Konsultasi</a
+              >
+            </li>
+            <li><a href="{% url 'home:home' %}#fasilitas">Fasilitas</a></li>
+            <li><a href="{% url 'aboutus:aboutus' %}#galeri">Galeri</a></li>
+          </ul>
+        </div>
+        <!-- footer column 2 -->
+        <div class="col-md-4">
+          <h4>Paket Kami</h4>
+          <ul class="list2">
+            <li>
+              <a href="{% url 'programs:programs' %}#service">Infant Care</a>
+            </li>
+            <li>
+              <a href="{% url 'programs:programs' %}#service"
+                >Toddler Program</a
+              >
+            </li>
+            <li>
+              <a href="{% url 'programs:programs' %}#service"
+                >Pre-School Program</a
+              >
+            </li>
+            <li>
+              <a href="{% url 'programs:programs' %}#service"
+                >Pre-Kindergarten</a
+              >
+            </li>
+            <li>
+              <a href="{% url 'programs:programs' %}#service"
+                >Upcoming Events</a
+              >
+            </li>
+            <li>
+              <a href="{% url 'programs:programs' %}#service"
+                >Program Lainnya</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h4>Kontak Kami</h4>
+          <ul class="list4">
+            <li>
+              <i class="bi bi-geo-alt me-2"></i>
+              Jl.Mawar No 123, Jakarta, Indonesia
+            </li>
+            <br />
+            <li>
+              <i class="bi bi-whatsapp me-2"></i>
+              088221319983
+            </li>
+            <br />
+            <li>
+              <i class="bi bi-envelope me-2"></i>
+              funeducare@gmail.com
+            </li>
+          </ul>
+        </div>
+        <!-- btn up -->
+        {% comment %}
+        <div class="button-group d-flex justify-content-center mb-4">
+          <button id="backToTop" class="btn btn-1">Back to Top</button>
+        </div>
+        {% endcomment %}
+        <!-- footer column 3/social media -->
+        <div class="d-flex justify-content-center mt-5">
+          <div class="col-md-4 text-center">
+            <h5 class="follow">Follow Us</h5>
+            <a
+              href="https://www.facebook.com/ruanggurucom/"
+              class="text-white me-2"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="https://x.com/ruangguru/" class="text-white me-2"
+              ><i class="bi bi-twitter"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/ruangguru/"
+              class="text-white me-2"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/company/ruangguru-com?referralCookiesId=23cf3dc9-bba5-43d3-ba10-a086684aef0e"
+              class="text-white me-2"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <!-- Footer Bottom -->
+      <div class="copyright text-center mt-4">
+        <p>Copyright &copy; 2024 FunEduCare. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
