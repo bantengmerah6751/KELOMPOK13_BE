@@ -1,5 +1,6 @@
 from django.shortcuts import render
+from .models import Galeri
 
-# Create your views here.
 def aboutus_view(request):
-    return render(request, 'aboutus/aboutus.html')
+    galeri_items = Galeri.objects.all()
+    return render(request, 'aboutus/aboutus.html', {'galeri_items': galeri_items})
