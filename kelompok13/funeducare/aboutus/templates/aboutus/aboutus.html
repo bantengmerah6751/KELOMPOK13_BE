@@ -2,13 +2,11 @@
 {% extends 'base/base.html' %} {% load static %} {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/aboutus-style.css' %}" />
 {% endblock %} {% block body_block %}
+
 <body>
   <header>
     <section class="image-section">
-      <img
-        src="{%static 'images/bg-aboutus.png' %}"
-        alt="Background Menu Aboutus"
-      />
+      <img src="{%static 'images/bg-aboutus.png' %}" alt="Background Menu Aboutus" />
       <div class="overlay content-1">
         <h1>About Us</h1>
         <hr class="garis mx-auto mx-md-0" />
@@ -19,12 +17,7 @@
     <section class="text-center">
       <div class="jumbotron text-center" style="margin-top: 100px">
         <h1>Siapa Kami?</h1>
-        <img
-          src="{%static 'images/logo2.png' %}"
-          alt="Logo Platform"
-          width="150"
-          height="150"
-        />
+        <img src="{%static 'images/logo2.png' %}" alt="Logo Platform" width="150" height="150" />
         <p>
           FunEduCare siap mendampingi tumbuh kembang si kecil dalam lingkungan
           penuh kasih, aman, dan edukatif. Berlokasi di Jl. Mawar No. 123,
@@ -89,185 +82,27 @@
 
       <div id="carouselTeachers" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active">
+          {% for guru in gurus %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}">
             <article class="pengajar-item shadow-box mx-auto">
-              <img
-                src="{%static 'images/guru1.jpeg' %}"
-                alt="Ms. Putri"
-                class="img-fluid rounded-circle mx-auto d-block"
-              />
-              <h3>Ms. Putri</h3>
-              <p>
-                Menciptakan suasana belajar yang menyenangkan dengan pendekatan
-                yang sabar dan mendukung kekreatifan anak-anak.
-              </p>
-              <a href="#" class="more-info">Informasi selengkapnya...</a>
+              <img src="{{ guru.foto.url }}" alt="{{ guru.nama }}" class="img-fluid rounded-circle mx-auto d-block" />
+              <h3>{{ guru.nama }}</h3>
+              <p>{{ guru.deskripsi_singkat }}</p>
+              <a href="#detail" class="more-info">Informasi selengkapnya...</a>
               <div class="additional-info">
-                <p id="detail">
-                  Sebagai pendidik berpengalaman dalam pendidikan anak usia
-                  dini, Miss Putri dikenal karena kesabarannya dan perhatian
-                  yang mendalam terhadap setiap anak. Ia selalu menciptakan
-                  suasana belajar yang menyenangkan, di mana anak-anak merasa
-                  bebas untuk bereksplorasi dan mengekspresikan kreativitas
-                  mereka. Dengan pendekatan yang interaktif, Miss Putri
-                  memadukan permainan dan pembelajaran untuk mendorong rasa
-                  ingin tahu anak-anak.
-                </p>
+                <p id="detail">{{ guru.deskripsi_detail }}</p>
               </div>
             </article>
           </div>
-          <div class="carousel-item">
-            <article class="pengajar-item shadow-box mx-auto">
-              <img
-                src="{%static 'images/guru2.jpeg' %}"
-                alt="Permata"
-                class="img-fluid rounded-circle mx-auto d-block"
-              />
-              <h3>Ms. Permata</h3>
-              <p>
-                Dengan energi positif dan kasih sayang, Permata membantu
-                anak-anak merasa nyaman dan percaya diri dalam belajar.
-              </p>
-              <a href="#" class="more-info">Informasi selengkapnya...</a>
-              <div class="additional-info">
-                <p id="detail">
-                  Memiliki passion yang besar dalam mendidik anak-anak, Permata
-                  dikenal sebagai sumber energi positif di kelas. Dengan
-                  pendekatan yang hangat dan penuh kasih, ia membantu anak-anak
-                  merasa nyaman dan percaya diri. Permata selalu berusaha
-                  menciptakan pengalaman belajar yang menyenangkan, di mana
-                  anak-anak dapat belajar dengan cara yang menyenangkan dan
-                  mengasyikkan.
-                </p>
-              </div>
-            </article>
-          </div>
-          <div class="carousel-item">
-            <article class="pengajar-item shadow-box mx-auto">
-              <img
-                src="{%static 'images/guru3.jpeg' %}"
-                alt="Dewi"
-                class="img-fluid rounded-circle mx-auto d-block"
-              />
-              <h3>Ms. Dewi</h3>
-              <p>
-                Pendekatan lembut dan penuh empati Dewi memastikan setiap anak
-                merasa diperhatikan dan terhubung.
-              </p>
-              <a href="#" class="more-info">Informasi selengkapnya...</a>
-              <div class="additional-info">
-                <p id="detail">
-                  Dikenal karena pendekatannya yang lembut dan penuh empati,
-                  Dewi selalu berhasil membangun ikatan kuat dengan anak-anak.
-                  Ia percaya bahwa setiap anak unik dan memiliki kebutuhan
-                  belajar yang berbeda. Dengan kesabaran dan perhatian, Dewi
-                  memastikan bahwa setiap anak mendapatkan perhatian yang mereka
-                  butuhkan, menciptakan lingkungan yang mendukung perkembangan
-                  emosional dan sosial mereka.
-                </p>
-              </div>
-            </article>
-          </div>
-
-          <div class="carousel-item">
-            <article class="pengajar-item shadow-box mx-auto">
-              <img
-                src="{%static 'images/guru4.jpeg' %}"
-                alt="Ms. Susi"
-                class="img-fluid rounded-circle mx-auto d-block"
-              />
-              <h3>Ms. Susi</h3>
-              <p>
-                Susi fokus pada pengembangan keterampilan sosial dan emosional
-                melalui kegiatan interaktif yang mendidik.
-              </p>
-              <a href="#" class="more-info">Informasi selengkapnya...</a>
-              <div class="additional-info">
-                <p id="detail">
-                  Dengan pengalaman bertahun-tahun di bidang pengajaran, Susi
-                  berfokus pada pengembangan keterampilan sosial dan emosional
-                  anak. Ia ahli dalam menciptakan kegiatan interaktif yang
-                  mendidik dan menyenangkan, mengajak anak-anak untuk bekerja
-                  sama dan belajar satu sama lain. Susi selalu berusaha membuat
-                  setiap pelajaran menarik dan relevan bagi kehidupan
-                  sehari-hari anak-anak.
-                </p>
-              </div>
-            </article>
-          </div>
-
-          <div class="carousel-item">
-            <article class="pengajar-item shadow-box mx-auto">
-              <img
-                src="{%static 'images/guru5.jpeg' %}"
-                alt="Ms. Alia"
-                class="img-fluid rounded-circle mx-auto d-block"
-              />
-              <h3>Ms. Alia</h3>
-              <p>
-                Kreativitas dan inovasi Alia membawa pengalaman belajar yang
-                menyenangkan dengan menggabungkan permainan edukatif.
-              </p>
-              <a href="#" class="more-info">Informasi selengkapnya...</a>
-              <div class="additional-info">
-                <p id="detail">
-                  Kreatif dan inovatif, Alia selalu membawa ide-ide baru ke
-                  dalam kelas. Ia senang menggabungkan permainan edukatif dalam
-                  kegiatan sehari-hari, membantu anak-anak belajar dengan cara
-                  yang menyenangkan dan menarik. Alia memiliki kemampuan luar
-                  biasa dalam memotivasi anak-anak untuk berpikir kritis dan
-                  berimajinasi, menjadikan setiap momen belajar sebagai
-                  kesempatan untuk eksplorasi.
-                </p>
-              </div>
-            </article>
-          </div>
-
-          <div class="carousel-item">
-            <article class="pengajar-item shadow-box mx-auto">
-              <img
-                src="{%static 'images/guru6.jpeg' %}"
-                alt="Ms. Kayla"
-                class="img-fluid rounded-circle mx-auto d-block"
-              />
-              <h3>Ms. Kayla</h3>
-              <p>
-                Kayla menciptakan lingkungan yang hangat dan ramah, memastikan
-                setiap anak merasa diterima dan didukung dalam proses belajar
-                mereka.
-              </p>
-              <a href="#" class="more-info">Informasi selengkapnya...</a>
-              <div class="additional-info">
-                <p id="detail">
-                  Penuh semangat dan selalu tersenyum, Kayla menciptakan
-                  lingkungan yang hangat dan ramah bagi anak-anak. Ia
-                  berkomitmen untuk memastikan setiap anak merasa diterima dan
-                  didukung dalam proses belajar mereka. Dengan pendekatan yang
-                  positif, Kayla mendorong anak-anak untuk berbagi ide dan
-                  berkolaborasi, menjadikan pengalaman belajar mereka lebih
-                  berarti dan menyenangkan.
-                </p>
-              </div>
-            </article>
-          </div>
+          {% endfor %}
         </div>
 
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselTeachers"
-          data-bs-slide="prev"
-        >
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTeachers" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Sebelumnya</span>
         </button>
 
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselTeachers"
-          data-bs-slide="next"
-        >
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselTeachers" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Berikutnya</span>
         </button>
@@ -282,133 +117,27 @@
 
       <div id="carouselGallery" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          {% for galeri in galeri_items %}
+          {% for galeri in galeris %}
           <div class="carousel-item {% if forloop.first %}active{% endif %}">
             <article class="gallery-item shadow-box mx-auto">
-              <img
-                src="{%static 'images/galeri1.jpg' %}"
-                alt="Activity 1"
-                class="img-fluid rounded"
-              />
+              <img src="{{ galeri.foto.url }}" alt="{{ galeri.judul }}" class="img-fluid rounded" />
               <div class="gallery-description">
-                <p>Belajar Bersama Didalam Ruangan</p>
+                <p>{{ galeri.judul }}</p>
                 <a href="#" class="more-info">Informasi selengkapnya...</a>
                 <div class="additional-info">
-                  <p id="detail">
-                    Sekelompok siswa sedang duduk bersama mengerjakan tugas dan
-                    berdiskusi di ruang kelas yang nyaman. Mereka saling
-                    membantu memahami pelajaran dengan suasana yang akrab dan
-                    kondusif.
-                  </p>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="carousel-item">
-            <article class="gallery-item shadow-box mx-auto">
-              <img
-                src="{%static 'images/galeri2.jpg' %}"
-                alt="Activity 2"
-                class="img-fluid rounded"
-              />
-              <div class="gallery-description">
-                <p>Bermain Bersama Teman - Teman</p>
-                <a href="#" class="more-info">Informasi selengkapnya...</a>
-                <div class="additional-info">
-                  <p id="detail">
-                    Anak-anak dengan penuh semangat bermain permainan edukatif
-                    dan menghibur di dalam ruangan. Terlihat kegembiraan di
-                    wajah mereka saat bermain puzzle, balok, atau permainan
-                    tradisional bersama teman-teman.
-                  </p>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="carousel-item">
-            <article class="gallery-item shadow-box mx-auto">
-              <img
-                src="{%static 'images/galeri3.png' %}"
-                alt="Activity 3"
-                class="img-fluid rounded"
-              />
-              <div class="gallery-description">
-                <p>Belajar Private</p>
-                <a href="#" class="more-info">Informasi selengkapnya...</a>
-                <div class="additional-info">
-                  <p id="detail">
-                    Seorang guru sedang memberikan bimbingan belajar secara
-                    personal kepada seorang siswa. Suasana belajar yang fokus
-                    dan intensif memungkinkan siswa lebih mudah memahami materi
-                    yang diajarkan.
-                  </p>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="carousel-item">
-            <article class="gallery-item shadow-box mx-auto">
-              <img
-                src="{%static 'images/galeri4.png' %}"
-                alt="Activity 4"
-                class="img-fluid rounded"
-              />
-              <div class="gallery-description">
-                <p>Olahraga Bersama</p>
-                <a href="#" class="more-info">Informasi selengkapnya...</a>
-                <div class="additional-info">
-                  <p id="detail">
-                    Sekelompok anak sedang melakukan aktivitas olahraga dengan
-                    penuh semangat. Mereka bergerak aktif, berlari, dan
-                    melakukan permainan olahraga yang menyehatkan sambil tertawa
-                    riang.
-                  </p>
-                </div>
-              </div>
-            </article>
-          </div>
-          <div class="carousel-item">
-            <article class="gallery-item shadow-box mx-auto">
-              <img
-                src="{%static 'images/galeri5.png' %}"
-                alt="Activity 5"
-                class="img-fluid rounded"
-              />
-              <div class="gallery-description">
-                <p>Bermain di luar ruangan</p>
-                <a href="#" class="more-info">Informasi selengkapnya...</a>
-                <div class="additional-info">
-                  <p id="detail">
-                    Anak-anak berlarian dan bermain dengan gembira di area
-                    terbuka. Mereka menikmati udara segar dan sinar matahari
-                    sambil melakukan berbagai permainan outdoor yang
-                    menyenangkan.
-                  </p>
+                  <p id="detail">{{ galeri.deskripsi_detail }}</p>
                 </div>
               </div>
             </article>
           </div>
           {% endfor %}
         </div>
-
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselGallery"
-          data-bs-slide="prev"
-        >
+      
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselGallery" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Sebelumnya</span>
         </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselGallery"
-          data-bs-slide="next"
-        >
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselGallery" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Berikutnya</span>
         </button>
@@ -416,6 +145,9 @@
     </section>
   </main>
   <!-- link js -->
+  <!-- Di bagian head atau sebelum closing body -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="{% static 'js/aboutus.js' %}"></script>
 </body>
 {% endblock %}
