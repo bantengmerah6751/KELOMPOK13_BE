@@ -1,6 +1,10 @@
 from django.shortcuts import render
-from .models import Galeri
+from .models import Guru, Galeri
 
 def aboutus_view(request):
-    galeri_items = Galeri.objects.all()
-    return render(request, 'aboutus/aboutus.html', {'galeri_items': galeri_items})
+    gurus = Guru.objects.all()
+    galeris = Galeri.objects.all().order_by('-created_at')
+    return render(request, 'aboutus/aboutus.html', {
+        'gurus': gurus,
+        'galeris': galeris
+    })
