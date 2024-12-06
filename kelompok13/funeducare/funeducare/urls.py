@@ -37,6 +37,8 @@ urlpatterns = [
     path('programs/', include('programs.urls')),
     path('pendaftaran/', include('pendaftaran.urls')),
     path('users/', include('users.urls')),
+    path('users/', include('django.contrib.auth.urls')),
+    path('social-auth/', include('social_django.urls', namespace='social')),
     path('dashboard/', views.dashboard_kegiatan, name='dashboard'),
     path('api/kegiatan/', views.get_kegiatan_api, name='kegiatan_api'),
     
