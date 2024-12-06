@@ -37,5 +37,7 @@ urlpatterns = [
     path('programs/', include('programs.urls')),
     path('pendaftaran/', include('pendaftaran.urls')),
     path('users/', include('users.urls')),
+    path('dashboard/', views.dashboard_kegiatan, name='dashboard'),
+    path('api/kegiatan/', views.get_kegiatan_api, name='kegiatan_api'),
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
