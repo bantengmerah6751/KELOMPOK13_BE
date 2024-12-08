@@ -43,3 +43,4 @@ class ProgramsCompetitionForm(forms.Form):
   )
 
   email.widget.attrs.update({'class':'form-control', 'placeholder':'Masukkan email anda'})
+

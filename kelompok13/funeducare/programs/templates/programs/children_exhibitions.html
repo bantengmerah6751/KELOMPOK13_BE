@@ -1,3 +1,4 @@
+{% load humanize %}
 <tbody>
   {% for exhibition in exhibition %}
   <tr>
@@ -6,6 +7,8 @@
     <td>
       {{ exhibition.description }}
     </td>
+    <td>{{ exhibition.price|floatformat:0|intcomma }}</td>
+    <td>{{ exhibition.stock }}</td>
     <td>
       <button class="btn btn-{{ exhibition.registration_status|yesno:'primary,warning,danger' }} btn-sm"
               {% if exhibition.registration_status == 'closed' %}disabled{% endif %}>

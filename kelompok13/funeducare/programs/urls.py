@@ -5,5 +5,5 @@ app_name = 'programs'
 
 urlpatterns = [
     path('', programs, name='programs'),
-    
+
 ]

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     'home',
     'aboutus',
     'programs',
@@ -95,7 +96,6 @@ DATABASES = {
 }
 
 PASSWORD_HASHERS = [
-    'django.contrib.auth.hashers.Argon2PasswordHasher',  # Bisa menggunakan Argon2
     'django.contrib.auth.hashers.PBKDF2PasswordHasher',  # Atau PBKDF2
     'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',  # Atau bcrypt
     'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',  # SHA1 (lebih lemah)
@@ -154,3 +154,15 @@ LOGIN_URL = 'users/login'
 AUTH_USER_MODEL = 'users.CustomUser'
 
 #logout
+
+
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#EMAIL_FILE_PATH = BASE_DIR/'emails'
+EMAIL_HOST = 'smtp.gmail.com'  
+EMAIL_PORT = 587  
+EMAIL_USE_TLS = True  
+EMAIL_USE_SSL = False  
+EMAIL_HOST_USER = 'funeducare.id@gmail.com' 
+EMAIL_HOST_PASSWORD = 'syev pekm fxbl yhik' 

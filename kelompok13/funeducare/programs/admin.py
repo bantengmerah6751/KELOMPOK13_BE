@@ -4,6 +4,13 @@ from django.contrib import admin
 from .models import *
 
 admin.site.register(ProgramsCompetitionModel)
+admin.site.register(Program)
+admin.site.register(Fee)
+admin.site.register(Schedule)
+admin.site.register(Teacher)
+admin.site.register(Facility)
+admin.site.register(Activity)
+
 
 @admin.register(ParentingSeminarModel)
 class ParentingSeminarAdmin(admin.ModelAdmin):
@@ -22,3 +29,5 @@ class ChildrenExhibitionAdmin(admin.ModelAdmin):
     list_display = ('date', 'title', 'registration_status')
     list_filter = ('registration_status', 'date')
     search_fields = ('title', 'description')
+
+

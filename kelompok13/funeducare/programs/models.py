@@ -1,6 +1,61 @@
 from django.db import models
 
 # Create your models here.
+
+class Program(models.Model):
+  name = models.CharField(max_length=255)
+  description = models.TextField()
+  age_range = models.CharField(max_length=50)
+  image = models.ImageField(upload_to='program_images/')
+
+  def __str__(self):
+    return self.name
+
+class Activity(models.Model):
+  program = models.ForeignKey(Program, related_name='activities', on_delete=models.CASCADE)
+  name = models.CharField(max_length=255)
+  icon_class = models.CharField(max_length=100)
+
+  def __str__(self):
+    return self.name
+
+class Facility(models.Model):
+  program = models.ForeignKey(Program, related_name='facilities', on_delete=models.CASCADE)
+  name = models.CharField(max_length=255)
+  description = models.TextField(default="Default description")
+  icon_class = models.CharField(max_length=100)
+
+  def __str__(self):
+    return self.name
+  
+class Fee(models.Model):
+  program = models.ForeignKey(Program, related_name='fees', on_delete=models.CASCADE)
+  type_program = models.CharField(max_length=50)
+  description = models.TextField(default="Default description")
+  amount = models.DecimalField(max_digits=10, decimal_places=2)
+
+  def __str__(self):
+    return f"{self.type_program} - {self.amount}"
+
+class Schedule(models.Model):
+  program = models.ForeignKey(Program, related_name='schedules', on_delete=models.CASCADE)
+  days = models.CharField(max_length=100)
+  time = models.CharField(max_length=100)
+
+  def __str__(self):
+    return f"{self.days} - {self.time}"
+
+class Teacher(models.Model):
+  program = models.ForeignKey(Program, related_name='teachers', on_delete=models.CASCADE)
+  name = models.CharField(max_length=255)
+  bio = models.TextField()
+  profile_picture = models.ImageField(upload_to='teacher_photos/', blank=True, null=True)
+  experience = models.CharField(max_length=255)
+
+  def __str__(self):
+    return self.name
+
+
 class ProgramsCompetitionModel(models.Model):
   #Disini kita akan menyimpan data dari forms ke model
   #Maka propertinya haruslah sama dengan di forms
@@ -29,6 +84,8 @@ class ParentingSeminarModel(models.Model):
   date = models.DateField()
   title = models.CharField(max_length=200)
   speaker = models.CharField(max_length=100)
+  price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
+  stock = models.PositiveIntegerField(default=10)
 
   TICKET_STATUS_CHOICES = [
     ('available', 'Tiket Tersedia'),
@@ -49,11 +106,13 @@ class ParentingSeminarModel(models.Model):
 
   def __str__(self):
     return f"{self.date} - {self.title}"
-  
+    
 class CookingClassModel(models.Model):
   date = models.DateField()
   title = models.CharField(max_length=200)
   instructor = models.CharField(max_length=100)
+  price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
+  stock = models.PositiveIntegerField(default=10)
 
   TICKET_STATUS_CHOICES = [
     ('available', 'Tiket Tersedia'),
@@ -79,6 +138,9 @@ class ChildrenExhibitionModel(models.Model):
   date = models.DateField()
   title = models.CharField(max_length=200)
   description = models.TextField()
+  price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
+  stock = models.PositiveIntegerField(default=10)
+
 
   REGISTRATION_STATUS_CHOICES = [
     ('open', 'Daftar Sekarang'),
@@ -99,3 +161,4 @@ class ChildrenExhibitionModel(models.Model):
   
   def __str__(self):
     return f"{self.date} - {self.title}"
+  

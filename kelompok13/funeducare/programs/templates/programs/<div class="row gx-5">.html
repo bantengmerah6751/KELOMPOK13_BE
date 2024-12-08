@@ -1,0 +1,139 @@
+<div class="row gx-5">
+  <div class="programs">
+    {% for program_name, program_data in programs_details.items %}
+      {% if program_data %}
+        <div class="program-detail mb-4">
+          <h2 class="fw-bold fs-1">{{ program_data.program.name }}</h2>
+          <p><strong>Age Range:</strong> {{ program_data.program.age_range }}</p>
+          <p>{{ program_data.program.description }}</p>
+          <div class="col-md-6">
+            {% if program_data.program.image %}
+              <img src="{{ program_data.program.image.url }}" alt="{{ program_data.program.name }}" class="img-fluid mb-3">
+            {% endif %}
+          </div>
+          
+          <!-- Activities -->
+           <div class="col-md-6">
+             <h4>Activities</h4>
+             {% if program_data.activities %}
+               <ul>
+                 {% for activity in program_data.activities %}
+                   <li>
+                     <i class="{{ activity.icon_class }}"></i> {{ activity.name }}
+                   </li>
+                 {% endfor %}
+               </ul>
+             {% else %}
+               <p>No activities available</p>
+             {% endif %}
+           </div>
+           <div
+           id="moreInfoInfantCare"
+           class="mt-1"
+           style="display: none"
+         >
+           <div class="row">
+             <div class="col-md-6">
+               <h6>Jadwal</h6>
+               <p class="fw-bold">Senin - Jumat, 07.00 - 18.00</p>
+             </div>
+             <div class="col-md-6">
+               <h6>Biaya</h6>
+               <p class="fw-bold" style="color: red">
+                 Mulai dari Rp 2.500.000/bulan
+               </p>
+             </div>
+           </div>
+           <button
+             type="button"
+             class="btn btn-outline-secondary btn-block d-flex justify-content-center align-items-center w-100"
+             data-bs-toggle="modal"
+             data-bs-target="#infoModalInfantCare"
+           >
+             Lihat Detail Lengkap
+           </button>
+         </div>
+         <div class="button-group d-flex">
+           <button
+             class="btn btn-block btn-3 mt-1 w-100"
+             id="toggleInfoInfantCare"
+           >
+             Informasi Lebih Lanjut
+           </button>
+         </div>
+         <div class="button-group mb-5 d-flex">
+           <a href="{% url 'pendaftaran:pendaftaran' %}" class="w-100 text-decoration-none">
+           <button
+             class="btn btn-block btn-2 mt-3 w-100"
+             style="margin-top: auto"
+           >
+             Booking Infant Care Program
+           </button>
+           <a/>
+         </div>
+          
+          <!-- Facilities -->
+          <h4>Facilities</h4>
+          {% if program_data.facilities %}
+            <ul>
+              {% for facility in program_data.facilities %}
+                <li>
+                  <i class="{{ facility.icon_class }}"></i> {{ facility.name }}
+                </li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <p>No facilities available</p>
+          {% endif %}
+          
+          <!-- Fees -->
+          <h4>Fees</h4>
+          {% if program_data.fees %}
+            <ul>
+              {% for fee in program_data.fees %}
+                <li>{{ fee.type_program }}: Rp {{ fee.amount }}</li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <p>No fees available</p>
+          {% endif %}
+          
+          <!-- Schedule -->
+          <h4>Schedule</h4>
+          {% if program_data.schedules %}
+            <ul>
+              {% for schedule in program_data.schedules %}
+                <li>{{ schedule.days }}: {{ schedule.time }}</li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <p>No schedule available</p>
+          {% endif %}
+          
+          <!-- Teachers -->
+          <h4>Teachers</h4>
+          {% if program_data.teachers %}
+            <div class="row">
+              {% for teacher in program_data.teachers %}
+                <div class="col-md-4">
+                  <div class="card">
+                    {% if teacher.profile_picture %}
+                      <img src="{{ teacher.profile_picture.url }}" class="card-img-top" alt="{{ teacher.name }}">
+                    {% endif %}
+                    <div class="card-body">
+                      <h5 class="card-title">{{ teacher.name }}</h5>
+                      <p class="card-text">{{ teacher.experience }}</p>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          {% else %}
+            <p>No teachers available</p>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+ 
