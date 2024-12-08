@@ -30,3 +30,5 @@ def pendaftaran(request):
 
 def syarat(request):
     return render(request, 'syarat.html')
+def cara_mendaftar(request):
+    return render(request, 'cara_mendaftar.html')
